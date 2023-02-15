@@ -1,1 +1,88 @@
 // Specific CSS for your home-page
+
+
+.container {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background {
+  background-color: rgb(246, 235, 222);
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 150px;
+    font-weight: bold;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: black;
+  }
+
+  .image {
+    opacity: 0.8;
+    border-radius: 8px;
+  }
+}
+
+.name {
+  margin-top: 30px;
+  width: 750px;
+
+  p {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: black;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 200px;
+  }
+}
+
+.sign-in {
+  text-align: center;
+  padding: 100px;
+  font-family: 'Playfair Display', serif;
+}
+
+
+.categories {
+  background-color: rgb(246, 235, 222);
+  padding: 50px;
+
+  h3 {
+    padding: 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: black;
+  }
+
+  .category-cards {
+  display: flex;
+  justify-content: space-around;
+
+    .card-category {
+      background-image: url("https://mymodernmet.com/wp/wp-content/uploads/2017/07/the-kiss-gustav-klimt-3.jpg");
+      width: 300px;
+
+      p {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 200px;
+        text-shadow: 3px;
+      }
+    }
+  }
+}
