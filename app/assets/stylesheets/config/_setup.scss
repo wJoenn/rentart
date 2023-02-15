@@ -32,6 +32,15 @@ h1, h2, h3 {
   font-family: $headers-font;
 }
 
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -49,5 +58,5 @@ h1, h2, h3 {
 }
 
 .text-red {
-  color: rgb(109, 39, 39);
+  color: rgb(143, 44, 44);
 }

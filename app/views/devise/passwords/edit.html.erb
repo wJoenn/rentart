@@ -4,15 +4,18 @@
   <%= form_with model: resource, scope: resource_name, url: session_path(resource_name), method: :put, data: { turbo: false }, id: "sessions__form" do |f|  %>
     <h3>Reset your password</h3>
 
+    <%= render "devise/shared/error_messages", resource: resource %>
     <%= f.hidden_field :reset_password_token %>
 
     <div class="form-field">
-      <%= f.label :password %>
+      <%= f.label :password do %>
+        Password <%= "(#{@minimum_password_length} characters minimum)" if @minimum_password_length %>
+      <% end %>
       <%= f.password_field :password %>
     </div>
 
     <div class="form-field">
-      <%= f.label :password_confirmation %>
+      <%= f.label :password_confirmation, "Confirm password" %>
       <%= f.password_field :password_confirmation %>
     </div>
 

@@ -1,0 +1,11 @@
+#registrations-edit > div {
+  margin: 0 auto 20px;
+  max-width: 100%;
+  width: 600px;
+
+  .delete {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}

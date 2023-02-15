@@ -25,7 +25,11 @@ form {
   .form-group {
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 750px) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
@@ -47,4 +51,13 @@ input, select, textarea {
 label {
   color: rgba(211, 211, 211, 0.5);
   font-size: 0.8rem;
+}
+
+.checkbox {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  padding-left: 10px;
+  transform: scale(1.2);
+  width: max-content;
 }

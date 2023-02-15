@@ -6,13 +6,20 @@
 
     <div class="form-field">
       <%= f.label :email %>
-      <%= f.email_field :email%>
+      <%= f.email_field :email, autofocus: true %>
     </div>
 
     <div class="form-field">
       <%= f.label :password %>
       <%= f.password_field :password%>
     </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="checkbox">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
 
     <%= f.submit "Confirm", class: "btn-default btn-airbnb" %>
   <% end %>
