@@ -1,0 +1,44 @@
+<%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false }, id: "registrations__form" do |f|  %>
+  <h3><%= title %></h3>
+
+  <div class="form-group">
+    <div class="form-field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :birthdate %>
+    <%= f.date_field :birthdate %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <% if edit %>
+    <div class="form-field">
+      <%= f.label :current_password %>
+      <%= f.password_field :current_password %>
+    </div>
+  <% end %>
+
+  <%= f.submit "Confirm", class: "btn-default btn-airbnb" %>
+<% end %>

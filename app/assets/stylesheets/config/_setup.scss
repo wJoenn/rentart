@@ -1,9 +1,16 @@
-$small: 576px;
+// Borders
+$border-default: 1px solid rgba(211, 211, 211, 0.5);
+
+// Screen size
 $large: 996px;
+$small: 576px;
+
+// Text format
+$text-padding: 0.5rem 1rem;
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 *, *::before, *::after {
@@ -13,12 +20,8 @@ $large: 996px;
 body {
   background-color: $main-grey;
   color: lightgray;
-  min-height: 100vh;
   font-family: $body-font;
-}
-
-button, input, select, textarea {
-  font: inherit;
+  min-height: 100vh;
 }
 
 html {
@@ -36,4 +39,15 @@ h1, h2, h3 {
 ::-webkit-scrollbar-thumb {
   background: rgb(70, 70, 70);
   border-radius: 3px;
+}
+
+.container-1200 {
+  margin: 0 auto;
+  max-width: 80%;
+  min-width: none;
+  width: 1200;
+}
+
+.text-red {
+  color: rgb(109, 39, 39);
 }

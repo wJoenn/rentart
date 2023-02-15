@@ -1,0 +1,19 @@
+button, .btn-default {
+  background-color: $secondary-grey;
+  border: $border-default;
+  border-radius: 3px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0), 0 0 15px rgba(0, 0, 0, 0.5);
+  font: inherit;
+  padding: $text-padding;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+}
+
+.btn-airbnb {
+  background-image: linear-gradient(to right, rgb(202, 86, 86), rgba(184,4,65,1));
+  border: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
