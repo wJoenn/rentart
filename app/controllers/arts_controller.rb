@@ -27,6 +27,7 @@ class ArtsController < ApplicationController
   end
 
   def art_params
-    params.require(:art).permit(:title, :description, :price, :location, :size, :category_id)
+    # photo is likely not correct
+    params.require(:art).permit(:photo, :title, :description, :price, :location, :size, :category_id)
   end
 end
