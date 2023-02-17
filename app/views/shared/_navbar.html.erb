@@ -1,8 +1,9 @@
 <nav>
   <%= link_to root_path do %>
-    <%= image_tag "artify_logo", class:"logo"%>
+    <%= image_tag "artify_logo", class: "logo" %>
   <% end %>
   <a href='#' data-item='Rent a Piece'>Rent a Piece</a>
+  <%= render "shared/form" %>
   <%# <a href='#' data-item='Collection'>Collection</a>
   <a href='#' data-item='Top Rented'>Top Rented</a>
   <a href='#' data-item='Contact-us'>Contact-us</a> %>
