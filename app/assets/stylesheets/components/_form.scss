@@ -5,9 +5,8 @@ form {
   flex-direction: column;
   gap: 20px;
   margin: 50px auto;
-  max-width: 100%;
   padding: 20px;
-  width: 600px;
+  width: Min(600px, 100%);
 
   h3 {
     border-bottom: $border-default;
