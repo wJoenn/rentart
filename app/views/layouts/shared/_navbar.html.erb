@@ -1,20 +1,20 @@
 <nav>
   <%= link_to root_path do %>
-    <%= image_tag "artify_logo", :height => "40", class: "logo"%>
+    <%= image_tag "artify_logo", class:"logo"%>
   <% end %>
   <a href='#' data-item='Rent a Piece'>Rent a Piece</a>
   <%# <a href='#' data-item='Collection'>Collection</a>
   <a href='#' data-item='Top Rented'>Top Rented</a>
   <a href='#' data-item='Contact-us'>Contact-us</a> %>
-  <%= render partial: "pages/shared/searchbar", class: "search-form"%>
+
   <%# Dropdown avatar %>
   <div class="dropdown" data-controller="navbar">
     <%= image_tag "avatar", id: "drop", class: "dropbtn", :height => "60" %>
-    <div id="myDropdown" class="dropdown-content">
-      <%= link_to "Login", "#" %>
-      <%= link_to "Logout", "#" %>
-      <%= link_to "Profile", "#" %>
-      <%= link_to "Contact", "#" %>
-    </div>
+    <%# <div id="myDropdown" class="dropdown-content"> %>
+      <%# <%= link_to "Login", "#" %>
+      <%# <%= link_to "Logout", "#" %>
+      <%# <%= link_to "Profile", "#" %>
+      <%# <%= link_to "Contact", "#" %>
+    <%# </div> %>
   </div>
 </nav>

@@ -4,19 +4,23 @@ nav {
   justify-content: space-evenly;
   // position: relative;
   width: 95%;
-  margin: 0 auto;
-  margin-top: 10px;
+  margin: 10px auto 0;
   height: 70px;
   padding: 16px;
   background-color: rgb(232, 230, 230);
   border-radius: 15px;
+  .logo{
+    height: 40px;
+    padding-left: 10px;
 
+  }
   a{
     font-family: 'roboto', sans-serif;
     text-decoration: none;
     color: #494949;
     font-size: 18px;
     font-weight: 300;
+    justify-content: center;
     transition: all 0.5s ease-in-out;
 
     &::before {
@@ -31,6 +35,7 @@ nav {
       width: 0;
       overflow: hidden;
       &:hover {
+
         &::before {
         width: 100%;
         transition: all 0.5s ease-in-out;
@@ -47,28 +52,25 @@ nav {
   font-size: 16px;
   border: 1px solid rgb(245, 242, 242);
 }
-.dropdown {
-  position: relative;
-  display: block;
-}
+// .dropdown {
+//   position: relative;
+//   display: block;
+// }
 
-.dropdown-content {
-  display: none;
-  position: fixed;
-  margin-top: 10px;
-  background-color: rgb(232, 230, 230);
-  width: 80px;
-  height: 130px;
-  z-index: 1;
-  border-radius: 10px;
-  padding-top: 10px;
-  padding-right: 5px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  color: #494949;
-}
+// .dropdown-content {
+//   display: none;
+//   position: fixed;
+//   margin-top: 10px;
+//   background-color: rgb(232, 230, 230);
+//   width: 80px;
+//   height: 130px;
+//   z-index: 1;
+//   border-radius: 10px;
+//   padding: 10px 5px 10px 10px;
+//   color: #494949;
+// }
 
 
-.show {
-  display: block;
-}
+// .show {
+//   display: block;
+// }

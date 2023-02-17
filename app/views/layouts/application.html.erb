@@ -11,7 +11,9 @@
   </head>
 
   <body>
-    <%= render partial: "pages/shared/navbar" %>
+    <%= render "layouts/shared/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
