@@ -6,4 +6,5 @@ class Art < ApplicationRecord
   # validations
   validates :title, :location, :description, :user, :category, :photos, presence: true
   validates :price, presence: true, greater_than: 0
+  validates :height, :width, numericality: { only_integer: true }, greater_than: 0
 end
