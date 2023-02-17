@@ -8,6 +8,7 @@ class CreateArts < ActiveRecord::Migration[7.0]
       t.integer :height
       t.integer :width
       t.references :user, null: false, foreign_key: true
+      t.references :category, null: false, foreign_key: true
 
       t.timestamps
     end
