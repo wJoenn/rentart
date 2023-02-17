@@ -1,55 +1,74 @@
 nav {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
-  position: relative;
+  // position: relative;
   width: 95%;
   margin: 0 auto;
   margin-top: 10px;
   height: 70px;
-  font-family: Hack, monospace;
   padding: 16px;
   background-color: rgb(232, 230, 230);
   border-radius: 15px;
 
-  .menuItems {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
+  a{
+    font-family: 'roboto', sans-serif;
+    text-decoration: none;
+    color: #494949;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
 
-
-    li {
-      // margin: 100px;
-
-      a {
-        text-decoration: none;
-        color: #8f8f8f;
-        font-size: 18px;
-        font-weight: 300;
-        transition: all 0.5s ease-in-out;
-        position: absolute;
-        text-transform: uppercase;
-
+    &::before {
+      content: attr(data-item);
+      transition: 0.5s;
+      color: #55679b;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+      &:hover {
         &::before {
-          content: attr(data-item);
-          transition: 0.5s;
-          color: #55679b;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 0;
-          overflow: hidden;
-        }
-
-        &:hover {
-          &::before {
-            width: 100%;
-            transition: all 0.5s ease-in-out;
-          }
+        width: 100%;
+        transition: all 0.5s ease-in-out;
         }
       }
     }
   }
+
+}
+// dropdown menu //
+.dropbtn {
+  // color: white;
+  // padding: 16px;
+  font-size: 16px;
+  border: 1px solid rgb(245, 242, 242);
+}
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  margin-top: 10px;
+  background-color: rgb(232, 230, 230);
+  width: 80px;
+  height: 130px;
+  z-index: 1;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color: #494949;
+}
+
+
+.show {
+  display: block;
 }
