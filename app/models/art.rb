@@ -1,5 +1,6 @@
 class Art < ApplicationRecord
-  belongs_to :user, :category
+  belongs_to :user
+  belongs_to :category
   has_many_attached :photos
 
   validates :title, :location, :description, :user, :photos, :category, presence: true
