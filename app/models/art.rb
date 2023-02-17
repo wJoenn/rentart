@@ -4,6 +4,6 @@ class Art < ApplicationRecord
   has_many_attached :photos
 
   # validations
-  validates :title, :location, :description, :user, :category, :photo, presence: true
-  validates :price, presence: true, numericality: {only_float: true}, greater_than: 0
+  validates :title, :location, :description, :user, :category, :photos, presence: true
+  validates :price, presence: true, greater_than: 0
 end
