@@ -1,0 +1,49 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+  margin: 10px auto 0;
+  height: 70px;
+  padding: 16px;
+  background-color: rgb(232, 230, 230);
+  border-radius: 15px;
+
+  .logo {
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #494949;
+    font-size: 18px;
+    font-weight: 300;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+
+    &::before {
+      content: attr(data-item);
+      transition: 0.5s;
+      color: #55679b;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+
+      &:hover::before {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+// dropdown menu //
+
+.dropbtn {
+  border: 1px solid rgb(245, 242, 242);
+}
