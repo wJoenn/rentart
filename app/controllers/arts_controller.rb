@@ -1,30 +1,29 @@
 class ArtsController < ApplicationController
-  before_action :set_user, only: %i[new create]
 
   def index
-    Art.all
+    @arts = Art.all
+  end
+
+  def show
+    @arts = Art.find(params[:id])
   end
 
   def new
-    Art.new
+    @art = Art.new
   end
 
   def create
     @art = Art.new(art_params)
-    @art.user = @user
+    @art.user = current_user
     if Art.save
       # unsure if this is correct
-      redirect_to user_path(@user)
+      redirect_to art_path(@art)
     else
       render 'new', status: :unprocessable_entity
     end
   end
 
   private
-
-  def set_user
-    @user = User.find(params[:user_id])
-  end
 
   def art_params
     # photo is likely not correct
