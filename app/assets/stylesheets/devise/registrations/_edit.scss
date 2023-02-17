@@ -1,0 +1,10 @@
+#registrations-edit > #registrations-delete {
+  margin: 0 auto 20px;
+  width: Min(600px, 100%);
+
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
