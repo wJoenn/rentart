@@ -8,7 +8,7 @@
       <h3>Do you want to rent the Mona Lisa for a day?</h3>
 
       <div class="btn-index">
-        <%= link_to "Book a piece of art >>", root_path, class: "btn-gold" %>
+        <%= link_to "Book a piece of art", root_path, class: "btn-gold" %>
       </div>
 
     </div>
@@ -18,24 +18,33 @@
   </div>
 
   <div class="sign-in">
-    <h3>Not registered yet?</h3>
+    <h2>Not registered yet?</h2>
     <p>render form</p>
     <%= image_tag "sign_up", class: "sign-up-img" %>
   </div>
 
   <div class="categories">
 
-    <h3>Find by category</h3>
+    <h2>Find by category</h2>
 
     <div class="category-cards">
       <div class="card-category">
-        <h3><%= link_to "Paintings", root_path, class: "text-category-card" %></h3>
+        <%= image_tag "painting_category", class: "category-image" %>
+        <div class="card-infos">
+          <h3><%= link_to "Paintings", root_path, class: "text-category-card" %></h3>
+        </div>
       </div>
       <div class="card-category">
-        <h3><%= link_to "Sculptures", root_path, class: "text-category-card" %></h3>
+        <%= image_tag "sculpture_category", class: "category-image" %>
+        <div class="card-infos">
+          <h3><%= link_to "Sculptures", root_path, class: "text-category-card" %></h3>
+        </div>
       </div>
       <div class="card-category">
-        <h3><%= link_to "Instalations", root_path, class: "text-category-card" %></h3>
+        <%= image_tag "instalation_category", class: "category-image" %>
+        <div class="card-infos">
+          <h3><%= link_to "Instalations", root_path, class: "text-category-card" %></h3>
+        </div>
       </div>
     </div>
   </div>
