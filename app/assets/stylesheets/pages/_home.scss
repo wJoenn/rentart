@@ -1,88 +1,63 @@
 // Specific CSS for your home-page
-
-
-.container {
-  background-size: cover;
-  background-position: center;
-  padding: 50px 0;
+.banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100vh;
+
 }
 
-.background {
-  background-color: rgb(246, 235, 222);
+.titles {
+  color: $gold;
 
   h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 150px;
     font-weight: bold;
-    color: black;
-    margin-top: 2px;
-    margin-bottom: 20px;
+    font-family: $title-font;
+    text-shadow: 5px 5px 5px rgb(14, 13, 13);
   }
 
   h3 {
-    font-family: 'Playfair Display', serif;
     font-size: 30px;
-    color: black;
+    color: white;
+    font-family: $body-font;
   }
 
-  .image {
-    opacity: 0.8;
-    border-radius: 8px;
+  .btn-index {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
   }
+
 }
 
-.name {
-  margin-top: 30px;
-  width: 750px;
+.image {
+  opacity: 0.8;
+  box-shadow: 5px 5px 10px rgb(14, 13, 13);
+  width: 375px;
 
-  p {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    color: black;
-    text-align: right;
-    font-weight: bold;
-    margin-top: 200px;
-  }
 }
 
 .sign-in {
   text-align: center;
-  padding: 100px;
-  font-family: 'Playfair Display', serif;
+  height: 100vh;
+  margin-top: 50px;
 }
 
+.sign-up-img {
+  width: 500px;
+}
 
 .categories {
-  background-color: rgb(246, 235, 222);
-  padding: 50px;
+  height: 100vh;
+  margin-top: 50px;
 
   h3 {
-    padding: 50px;
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    color: black;
+    padding: 50px 0px;
   }
+}
 
-  .category-cards {
+.category-cards {
   display: flex;
-  justify-content: space-around;
-
-    .card-category {
-      background-image: url("https://mymodernmet.com/wp/wp-content/uploads/2017/07/the-kiss-gustav-klimt-3.jpg");
-      width: 300px;
-
-      p {
-        font-family: 'Playfair Display', serif;
-        font-size: 20px;
-        color: black;
-        text-align: center;
-        font-weight: bold;
-        margin-top: 200px;
-        text-shadow: 3px;
-      }
-    }
-  }
+  justify-content: space-between;
 }

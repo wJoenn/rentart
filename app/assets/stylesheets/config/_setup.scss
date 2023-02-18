@@ -1,0 +1,66 @@
+// Borders
+$border-default: 1px solid rgba(211, 211, 211, 0.5);
+
+// Screen size
+$large: 996px;
+$small: 576px;
+
+// Text format
+$text-padding: 0.5rem 1rem;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $main-grey;
+  color: lightgray;
+  font-family: $body-font;
+  min-height: 100vh;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+h1, h2, h3 {
+  font-family: $headers-font;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(70, 70, 70);
+  border-radius: 3px;
+}
+
+.container-1200 {
+  margin: 0 auto;
+  max-width: 80%;
+  min-width: none;
+  width: 1200;
+}
+
+.text-red {
+  color: rgb(143, 44, 44);
+}
