@@ -1,0 +1,47 @@
+<%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false }, id: "registrations__form" do |f|  %>
+  <h3><%= title %></h3>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form-group">
+    <div class="form-field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, autofocus: true %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :birthdate %>
+    <%= f.date_field :birthdate %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :email %>
+    <%= f.email_field :email, autocomplete: "email" %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :password do %>
+      Password <%= "(#{@minimum_password_length} characters minimum)" if @minimum_password_length %>
+    <% end %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :password_confirmation, "Confirm password" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <% if edit %>
+    <div class="form-field">
+      <%= f.label :current_password %>
+      <%= f.password_field :current_password %>
+    </div>
+  <% end %>
+  <%= f.submit "Confirm", class: "btn-default btn-airbnb" %>
+<% end %>
