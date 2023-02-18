@@ -1,18 +1,20 @@
 require "open-uri"
 
-puts "=== DESTROYING TABLES ==="
+start = Time.now
 
-Category.destroy_all
-puts "Categories destroyed"
+puts "=== DESTROYING TABLES ==="
 
 User.destroy_all
 puts "User destroyed"
+
+Category.destroy_all
+puts "Categories destroyed"
 
 puts "\n=== CREATING CATEGORIES ==="
 
 5.times do
   name = Faker::Book.genre
-  category = Category.new(name: name)
+  category = Category.new(name:)
 
   photo = URI.open("https://source.unsplash.com/random")
   category.photo.attach(io: photo, filename: "#{name}.png", content_type: "image/png")
@@ -23,42 +25,39 @@ puts "\n=== CREATING CATEGORIES ==="
 end
 
 2.times do
-  puts "\n=== CREATING User ==="
+  puts "\n=== CREATING USER ==="
 
-  user_params = {
-    first_name: Faker::Name.first_name,
-    last_name:Faker::Name.last_name,
-    email: Faker::Internet.email,
-    password: "password",
-    birthdate: Faker::Date.birthday(min_age: 18)
-  }
+  user = User.create!({
+                        first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,
+                        email: Faker::Internet.email,
+                        password: "password",
+                        birthdate: Faker::Date.birthday(min_age: 18)
+                      })
 
-  user = User.create!(user_params)
+  puts "#{user.first_name} #{user.last_name} added to the users"
 
-  puts "#{user_params[:first_name]} #{user_params[:last_name]} added to the users"
-
-  puts "\n=== ADDING ARTS TO USER ==="
+  puts "\n=== ADDING ARTS TO #{user.first_name.upcase} #{user.last_name.upcase} ==="
 
   5.times do
-    art_params = {
-      title: Faker::Book.title,
-      location: Faker::Address.full_address,
-      description: Faker::Lorem.paragraph,
-      user: user,
-      price: rand(9.99..1000)
-    }
-
-    art = Art.new(art_params)
+    art = Art.new({
+                    title: Faker::Book.title,
+                    location: Faker::Address.full_address,
+                    description: Faker::Lorem.paragraph,
+                    user:,
+                    price: rand(9.99..1000)
+                  })
 
     art.category = Category.all.sample
 
     2.times do
       photo = URI.open("https://source.unsplash.com/random")
-      art.photos.attach(io: photo, filename: "#{art_params[:title]}#{rand(1..999999)}.png", content_type: "image/png")
+      art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
     end
 
     art.save!
 
-    puts "#{art_params[:title]} added to the arts"
+    puts "#{art.title} added to the arts"
   end
 end
+
+puts "\nSeed completed in #{(Time.now - start).round}s"
