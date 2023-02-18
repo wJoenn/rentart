@@ -1,12 +1,12 @@
 <nav>
   <%= link_to root_path do %>
-    <%= image_tag "artify_logo", class: "logo" %>
+    <%= image_tag "artify_logo.png", class: "logo" %>
   <% end %>
   <%= link_to "rent a piece", arts_path %>
   <%= render "shared/form" %>
 
   <%# Dropdown avatar %>
   <div class="dropdown" data-controller="navbar">
-    <%= image_tag "avatar", id: "drop", class: "dropbtn", :height => "60" %>
+    <%= image_tag "avatar.png", id: "drop", class: "dropbtn", :height => "60" %>
   </div>
 </nav>
