@@ -1,49 +1,48 @@
-nav {
-  display: flex;
+#header-navbar {
   align-items: center;
+  background-color: lightgrey;
+  border-radius: 20px;
+  display: flex;
   justify-content: space-evenly;
-  width: 95%;
   margin: 10px auto 0;
-  height: 70px;
-  padding: 16px;
-  background-color: rgb(232, 230, 230);
-  border-radius: 15px;
+  padding: 10px 20px;
+  width: 95%;
+
+  a {
+    color: $main-grey;
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &::before {
+      bottom: 0;
+      color: #c12d4c;
+      content: attr(data-item);
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.3s;
+      width: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
 
   .logo {
     height: 40px;
     padding-left: 10px;
   }
 
-  a {
-    text-decoration: none;
-    color: #494949;
-    font-size: 18px;
-    font-weight: 300;
-    justify-content: center;
-    transition: all 0.5s ease-in-out;
-
-    &::before {
-      content: attr(data-item);
-      transition: 0.5s;
-      color: #55679b;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 0;
-      overflow: hidden;
-
-      &:hover::before {
-        width: 100%;
-        transition: all 0.5s ease-in-out;
-      }
-    }
+  #dropdown {
+    border: 1px solid rgb(245, 242, 242);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
   }
-}
-
-// dropdown menu //
-
-.dropbtn {
-  border: 1px solid rgb(245, 242, 242);
 }
