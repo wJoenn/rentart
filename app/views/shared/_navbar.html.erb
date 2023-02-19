@@ -1,13 +1,14 @@
 <nav id="header-navbar">
-  <%= link_to root_path do %>
-    <%= image_tag "artify_logo.png", class: "logo" %>
-  <% end %>
+  <div id="btn-home">
+    <%= link_to "Rentart", root_path %>
+    <span>.</span>
+  </div>
 
   <%= link_to "rent a piece", arts_path, data: {item: "rent a piece"} %>
 
   <%= form_with url: "#", class: "max-content" do |form| %>
     <%= form.text_field :search, placeholder: "What are you looking for ?" %>
-    <%= form.submit "Search", class:"btn-airbnb btn-default max-content" %>
+    <%= form.submit "Search", class:"btn-gold btn-default max-content" %>
   <% end %>
 
   <div class="dropdown">
