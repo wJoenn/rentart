@@ -1,12 +1,16 @@
-<nav>
+<nav id="header-navbar">
   <%= link_to root_path do %>
     <%= image_tag "artify_logo.png", class: "logo" %>
   <% end %>
-  <%= link_to "rent a piece", arts_path %>
-  <%= render "shared/form" %>
 
-  <%# Dropdown avatar %>
-  <div class="dropdown" data-controller="navbar">
-    <%= image_tag "avatar.png", id: "drop", class: "dropbtn", :height => "60" %>
+  <%= link_to "rent a piece", arts_path, data: {item: "rent a piece"} %>
+
+  <%= form_with url: "#", class: "max-content" do |form| %>
+    <%= form.text_field :search, placeholder: "What are you looking for ?" %>
+    <%= form.submit "Search", class:"btn-airbnb btn-default max-content" %>
+  <% end %>
+
+  <div class="dropdown">
+    <%= image_tag "avatar.png", id: "dropdown" %>
   </div>
 </nav>
