@@ -1,60 +1,55 @@
-// Specific CSS for your home-page
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  top: 0;
-}
-
-.titles {
-  color: $gold;
-
-  h1 {
-    font-size: 150px;
-    font-weight: bold;
-    font-family: $title-font;
-    text-shadow: 5px 5px 5px rgb(14, 13, 13);
-  }
-
-  h3 {
-    font-size: 30px;
-    color: $light-gray;
-  }
-
-  .btn-index {
+#pages-home {
+  .banner {
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
+    height: 100vh;
+    justify-content: space-between;
+  }
+
+  .banner-painting {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    width: Min(375px, 30%);
+  }
+
+  .categories {
+    height: 100vh;
+    margin-top: 50px;
+
+    h2 {
+      padding: 50px 0px;
+    }
+
+    .category-cards {
+      display: grid;
+    }
+  }
+
+  .sign-up {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     margin-top: 50px;
   }
-}
 
-.banner-painting {
-  opacity: 0.8;
-  box-shadow: 5px 5px 10px rgb(14, 13, 13);
-  width: 375px;
-}
+  .titles {
+    h1 {
+      color: $gold;
+      font-family: $title-font;
+      font-size: 150px;
+      font-weight: bold;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
 
-.sign-in {
-  text-align: center;
-  height: 100vh;
-  margin-top: 50px;
-}
+    h3 {
+      font-size: 30px;
+    }
 
-.sign-up-img {
-  width: 500px;
-}
-
-.categories {
-  height: 100vh;
-  margin-top: 50px;
-
-  h2 {
-    padding: 50px 0px;
+    .titles-btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 50px;
+    }
   }
-}
-
-.category-cards {
-  display: flex;
-  justify-content: space-between;
 }
