@@ -20,3 +20,16 @@ button, .btn-default {
   border: none;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+.btn-gold {
+  background-color: $main-grey;
+  border: 1px solid $gold;
+  color: $gold;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $gold;
+    color: $main-grey;
+  }
+}
