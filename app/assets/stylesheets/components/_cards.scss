@@ -1,39 +1,51 @@
 // this has to be moved to container later, put it here because of conflicts
 .arts-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
     a {
       text-decoration: none;
-      color: white !important;
+      color: white;
     }
 }
 
 .art-card {
-  display: flex;
-  flex-direction: column;
+  margin-top: 2%;
 }
 
 .art-card-img {
-  box-sizing: border-box;
   border-radius: 5%;
-  object-fit: cover;
   height: 300px;
   width: 300px;
   margin-bottom: 5px;
+  background-position: center;
+  background-size: cover;
 }
 
 .art-card-body {
-  margin-left: 5px;
+  width: 300px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .art-card-title {
+  color: white;
   font-weight: bold;
 }
 
 .art-card-text {
   color: lightslategrey;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.art_card-price {
+  color: white;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .favorites-gold {
