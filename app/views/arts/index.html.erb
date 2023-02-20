@@ -1,2 +1,16 @@
-<h1>Arts#index</h1>
-<p>Find me in app/views/arts/index.html.erb</p>
+<div class="arts-container">
+  <% @arts.each do |art| %>
+    <%= link_to art_path(art), class: "art-card" do %>
+      <div class="art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url();">
+        <div class="favorites-icon">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+      </div>
+      <div class="art-card-body">
+        <h5 class="art-card-title"><%= art.title %></h5>
+        <p class="art-card-text"><%= art.description %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
