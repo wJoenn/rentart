@@ -1,28 +1,30 @@
 <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false }, id: "registrations__form" do |f|  %>
   <h3><%= title %></h3>
 
-  <%= render "devise/shared/error_messages", resource: resource %>
-
   <div class="form-group">
     <div class="form-field">
       <%= f.label :first_name %>
       <%= f.text_field :first_name %>
+      <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("First") } %></span>
     </div>
 
     <div class="form-field">
       <%= f.label :last_name %>
       <%= f.text_field :last_name %>
+      <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Last") } %></span>
     </div>
   </div>
 
   <div class="form-field">
     <%= f.label :birthdate %>
     <%= f.date_field :birthdate %>
+      <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Birthdate") } %></span>
   </div>
 
   <div class="form-field">
     <%= f.label :email %>
     <%= f.email_field :email, autocomplete: "email" %>
+    <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Email") } %></span>
   </div>
 
   <div class="form-field">
@@ -30,17 +32,20 @@
       Password <%= "(#{@minimum_password_length} characters minimum)" if @minimum_password_length %>
     <% end %>
     <%= f.password_field :password %>
+    <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Password") && !m.match("confirmation")} %></span>
   </div>
 
   <div class="form-field">
     <%= f.label :password_confirmation, "Confirm password" %>
     <%= f.password_field :password_confirmation %>
+    <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Password confirmation") } %></span>
   </div>
 
   <% if edit %>
     <div class="form-field">
       <%= f.label :current_password %>
       <%= f.password_field :current_password %>
+      <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Current password") } %></span>
     </div>
   <% end %>
   <%= f.submit "Confirm", class: "btn-default btn-gold" %>
