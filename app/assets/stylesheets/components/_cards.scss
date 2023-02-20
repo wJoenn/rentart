@@ -1,0 +1,47 @@
+// this has to be moved to container later, put it here because of conflicts
+.arts-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: white !important;
+    }
+}
+
+.art-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.art-card-img {
+  box-sizing: border-box;
+  border-radius: 5%;
+  object-fit: cover;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 5px;
+}
+
+.art-card-body {
+  margin-left: 5px;
+}
+
+.art-card-title {
+  font-weight: bold;
+}
+
+.art-card-text {
+  color: lightslategrey;
+}
+
+.favorites-gold {
+  color: $gold;
+}
+
+.favorites-location-div {
+  float: right;
+  margin: 20px;
+  font-size: 20px;
+}
