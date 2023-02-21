@@ -1,8 +1,8 @@
-<div id="sessions-new" class="container-1200">
-  <h2>Log in</h2>
-
+<div id="sessions-new" class="container-default c-600">
   <%= form_with model: resource, scope: resource_name, url: session_path(resource_name), data: { turbo: false }, id: "sessions__form" do |f|  %>
     <h3>Log in</h3>
+
+    <%= render "devise/shared/flashes" %>
 
     <div class="form-field">
       <%= f.label :email %>
@@ -12,6 +12,7 @@
     <div class="form-field">
       <%= f.label :password %>
       <%= f.password_field :password%>
+      <%= link_to "Forgot your password ?", new_password_path(resource_name), class: "text-smaller form-link" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
@@ -22,5 +23,6 @@
     <% end %>
     <%= f.submit "Confirm", class: "btn-default btn-gold" %>
   <% end %>
+
   <%= render "devise/shared/links" %>
 </div>
