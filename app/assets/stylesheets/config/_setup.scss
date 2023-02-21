@@ -17,6 +17,15 @@ $text-padding: 0.5rem 1rem;
   box-sizing: border-box;
 }
 
+a {
+  color: $gold;
+  text-decoration: none;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
 body {
   background-color: $main-grey;
   color: lightgray;
@@ -52,13 +61,6 @@ ul {
 ::-webkit-scrollbar-thumb {
   background: rgb(70, 70, 70);
   border-radius: 3px;
-}
-
-.container-1200 {
-  margin: 0 auto;
-  max-width: 80%;
-  min-width: none;
-  width: 1200px;
 }
 
 .max-content {
