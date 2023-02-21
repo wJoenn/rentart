@@ -24,8 +24,5 @@
     <%= f.submit "Confirm", class: "btn-default btn-gold" %>
   <% end %>
 
-  <div>
-    <span>Don't have an account yet ? </span>
-    <%= link_to "Sign up", new_registration_path(resource_name) %>
-  </div>
+  <%= render "devise/shared/links" %>
 </div>
