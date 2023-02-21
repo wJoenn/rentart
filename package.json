@@ -5,11 +5,18 @@
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.2.5",
     "@popperjs/core": "^2.11.6",
+    "autoprefixer": "^9",
     "bootstrap": "^5.2.3",
+    "el-transition": "^0.0.7",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "dropdown-menu-basic": "^1.2.0"
   }
 }

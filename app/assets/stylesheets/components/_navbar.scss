@@ -44,6 +44,43 @@ nav {
 
 // dropdown menu //
 
-.dropbtn {
-  border: 1px solid rgb(245, 242, 242);
+.dropdown {
+  position: relative;
+}
+
+.menu-options {
+  background-color: $secondary-grey;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px rgb(14, 13, 13);
+  max-height: 300px;
+  height: max-content;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 10;
+}
+
+.options {
+  text-align: left;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+
+  .option {
+    text-decoration: none;
+    color: $lightgrey;
+    padding: 10px 10px;
+    width: max-content;
+  }
+
+  .btn-gold {
+    margin: 10px 10px;
+    width: max-content;
+  }
+}
+
+.hidden {
+  max-height: 0;
 }
