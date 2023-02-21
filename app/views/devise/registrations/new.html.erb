@@ -1,6 +1,8 @@
-<div id="registration-new" class="container-default c-1200">
-  <h2>Sign up</h2>
-
+<div id="registration-new" class="container-default c-600">
   <%= render "form", title: "Sign up", edit: false %>
-  <%= render "devise/shared/links" %>
+
+  <div>
+    <span>Already have an account ? </span>
+    <%= link_to "Log in", new_session_path(resource_name) %>
+  </div>
 </div>
