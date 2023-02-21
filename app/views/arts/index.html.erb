@@ -10,8 +10,10 @@
         </div>
         <div class="art-card-body">
           <h5 class="art-card-title"><%= art.title %></h5>
-          <p class="art-card-text"><%= art.description %></p>
-          <p class="art_card-price">€ <%= art.price.round(2) %> per day</p>
+          <div>
+            <p class="art-card-text"><%= art.description %></p>
+            <p class="art_card-price">€ <%= art.price.round(2) %> per day</p>
+          </div>
         </div>
       <% end %>
     <% end %>
