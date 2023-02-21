@@ -72,6 +72,14 @@ label {
   }
 }
 
+.form-link {
+  color: $gold;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
 #header-navbar form {
   border: none;
   border-radius: 5px;
