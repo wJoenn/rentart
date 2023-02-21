@@ -1,0 +1,64 @@
+// this has to be moved to container later, put it here because of conflicts
+.arts-container {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+}
+
+.center-card {
+  display: flex;
+  justify-content: center;
+}
+
+.art-card {
+  margin-top: 2%;
+}
+
+.art-card-img {
+  border-radius: 5%;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 5px;
+  background-position: center;
+  background-size: cover;
+}
+
+.art-card-body {
+  width: 300px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.art-card-title {
+  color: white;
+  font-weight: bold;
+}
+
+.art-card-text {
+  color: lightslategrey;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.art_card-price {
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.favorites-gold {
+  color: $gold;
+}
+
+.favorites-location-div {
+  float: right;
+  margin: 20px;
+  font-size: 20px;
+}
