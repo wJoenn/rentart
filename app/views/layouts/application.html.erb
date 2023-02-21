@@ -11,10 +11,13 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "devise/shared/flashes" %>
-    <%= yield %>
+    <header>
+      <%= render "shared/navbar" %>
+    </header>
+
+    <main>
+      <%= render "devise/shared/flashes" %>
+      <%= yield %>
+    </main>
   </body>
 </html>

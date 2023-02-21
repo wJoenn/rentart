@@ -1,1 +1,55 @@
-// Specific CSS for your home-page
+#pages-home {
+  .banner {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+  }
+
+  .banner-painting {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    width: Min(375px, 30%);
+  }
+
+  .categories {
+    height: 100vh;
+    margin-top: 50px;
+
+    h2 {
+      padding: 50px 0px;
+    }
+
+    .category-cards {
+      display: grid;
+    }
+  }
+
+  .sign-up {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 50px;
+  }
+
+  .titles {
+    h1 {
+      color: $gold;
+      font-family: $title-font;
+      font-size: 150px;
+      font-weight: bold;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    .titles-btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 50px;
+    }
+  }
+}
