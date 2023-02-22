@@ -3,6 +3,5 @@ class CategoriesController < ApplicationController
   def show
     @categories = Category.all
     @category = Category.find(params[:id])
-    @arts = Category.find(params[:id]).arts
   end
 end
