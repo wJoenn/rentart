@@ -63,20 +63,13 @@ nav {
 }
 
 .options {
-  text-align: left;
-  width: 95%;
+  padding: 16px 16px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 
   .option {
-    text-decoration: none;
-    color: $lightgrey;
-    padding: 10px 10px;
-    width: max-content;
-  }
-
-  .btn-gold {
-    margin: 10px 10px;
+    padding: 10px 0px;
     width: max-content;
   }
 }

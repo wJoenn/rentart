@@ -12,11 +12,11 @@
 
     <div class="menu-options hidden" data-dropdown-menu-target="menu">
       <div>
-        <div class="options" role="menu" aria-orientation="vertical">
-          <%= link_to "See all pieces of art", arts_path, role: "menuitem", class: "option" %>
-          <button type="submit" class="btn-gold" role="menuitem">
+        <div class="options">
+          <%= link_to "See all pieces of art", arts_path, class: "option" %>
+          <button type="submit" class="btn-gold max-content">
             <% if current_user %>
-              <%= link_to "log out", destroy_user_session_path %>
+              <%= link_to "log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
             <% else %>
               <%= link_to "log in", user_session_path %>
             <% end %>
