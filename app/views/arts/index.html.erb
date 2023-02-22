@@ -23,7 +23,7 @@
   <div class="arts-container container-default">
 
     <% @arts.each do |art| %>
-      <%= link_to art_path(art), class: "art-card" do %>
+      <%= link_to art_path(art), class: "art-card", data: { aos: "fade-up", "aos-duration": "750" } do %>
 
         <div class="art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path art.photos.first.key %>');">
 
