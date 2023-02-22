@@ -8,12 +8,9 @@
   background-position: center;
   background-size: cover;
   min-width: 0;
-
-  @media screen and (min-width: $small) {
-    width: 250px;
-    height: 125px;
-    font-size: 20px;
-  }
+  width: 250px;
+  height: 125px;
+  font-size: 20px;
 
   @media screen and (min-width: $large) {
     width: 200px;
