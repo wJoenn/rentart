@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   # resources for Art model
   resources :arts, only: %i[index show new create]
+  resources :categories, only: :show
 end
