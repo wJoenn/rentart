@@ -29,6 +29,8 @@ a {
 body {
   background-color: $main-grey;
   color: lightgray;
+  display: flex;
+  flex-direction: column;
   font-family: $body-font;
   min-height: 100vh;
 }
@@ -43,6 +45,10 @@ html {
 
 h1, h2, h3 {
   font-family: $headers-font;
+}
+
+main {
+  flex-grow: 1;
 }
 
 p {

@@ -1,16 +1,11 @@
 #header-navbar {
-  align-items: center;
-  background-color: lightgrey;
-  border-radius: 20px;
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
-  margin: 10px auto 0;
-  padding: 10px 20px;
+  margin: 0 auto;
   width: 95%;
 
   a {
-    color: $main-grey;
-    font-size: 18px;
     position: relative;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -33,18 +28,22 @@
     }
   }
 
-  .logo {
-    height: 40px;
-    padding-left: 10px;
+  .navbar-right {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 200px;
   }
 
   #btn-home {
     align-items: center;
-    color: $main-grey;
+    color: lightgray;
     display: flex;
     font-family: $title-font;
     font-size: 50px;
     font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     width: 200px;
 
     a {
@@ -71,10 +70,18 @@
   }
 
   #dropdown {
-    border: 1px solid rgb(245, 242, 242);
+    border: $border-default;
     border-radius: 50%;
     cursor: pointer;
-    height: 60px;
+    height: 55px;
+    object-fit: cover;
+    object-position: top;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 55px;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
   }
 }
