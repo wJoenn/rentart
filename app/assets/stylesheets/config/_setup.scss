@@ -40,6 +40,15 @@ p {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+
+    &:hover {
+      color: inherit;
+    }
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -61,6 +70,14 @@ ul {
   width: 1200px;
 }
 
+.max-content {
+  width: max-content !important;
+}
+
 .text-red {
   color: rgb(143, 44, 44);
+}
+
+.text-smaller {
+  font-size: 0.8rem;
 }

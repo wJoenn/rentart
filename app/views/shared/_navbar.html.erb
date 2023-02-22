@@ -1,9 +1,15 @@
-<nav>
-  <%= link_to root_path do %>
-    <%= image_tag "artify_logo.png", class: "logo" %>
+<nav id="header-navbar">
+  <div id="btn-home">
+    <%= link_to "Rentart", root_path %>
+    <span>.</span>
+  </div>
+
+  <%= link_to "rent a piece", arts_path, data: {item: "rent a piece"} %>
+
+  <%= form_with url: "#", class: "max-content" do |form| %>
+    <%= form.text_field :search, placeholder: "What are you looking for ?" %>
+    <%= form.submit "Search", class:"btn-gold btn-default max-content" %>
   <% end %>
-  <%= link_to "rent a piece", arts_path %>
-  <%= render "shared/form" %>
 
   <%# Dropdown avatar %>
   <div class="dropdown" data-controller="dropdown-menu">
@@ -12,7 +18,7 @@
 
     <div class="menu-options hidden" data-dropdown-menu-target="menu">
       <div>
-        <div class="options">
+        <div class="options"  data-dropdown-menu-target="options">
           <%= link_to "See all pieces of art", arts_path, class: "option" %>
           <button type="submit" class="btn-gold max-content">
             <% if current_user %>
