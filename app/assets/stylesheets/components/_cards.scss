@@ -22,9 +22,9 @@
 }
 
 .art-card {
-  width: 300px;
-  margin-bottom: 20px;
+  max-width: 100%;
   min-width: 0;
+  margin-bottom: 20px;
   flex-shrink: 0;
 }
 
