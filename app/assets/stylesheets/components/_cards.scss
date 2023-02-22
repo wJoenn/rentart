@@ -8,13 +8,22 @@
   background-position: center;
   background-size: cover;
   min-width: 0;
-  width: 200px;
-  height: 100px;
+
+  @media screen and (min-width: $small) {
+    width: 250px;
+    height: 125px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 200px;
+    height: 100px;
+    font-size: 16px;
+  }
 }
 
 .category-card-text {
   font-family: $title-font;
-  font-size: 15px;
   color: $gold;
 }
 
