@@ -49,7 +49,7 @@ end
 
     art.category = Category.all.sample
 
-    2.times do
+    5.times do
       photo = URI.open("https://source.unsplash.com/random")
       art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
     end

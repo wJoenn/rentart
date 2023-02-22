@@ -48,12 +48,14 @@
   .main {
     display: grid;
     gap: 100px;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 420px;
   }
 
   .user {
     border-bottom: $border-default;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 20px;
     padding-bottom: 20px;
   }
 }
