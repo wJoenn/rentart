@@ -33,3 +33,23 @@ button, .btn-default {
     color: $main-grey;
   }
 }
+
+.category-btn {
+  height: 115px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-left-btn {
+  background: $main-grey;
+  background: linear-gradient(270deg, rgba(0,0,0,0) 0%, $main-grey 30%, $main-grey 100%);
+  justify-content: flex-start;
+}
+
+.category-right-btn {
+  background: $main-grey;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, $main-grey 30%, $main-grey 100%);
+  justify-content: flex-end;
+}
