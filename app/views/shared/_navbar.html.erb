@@ -1,10 +1,8 @@
 <nav id="header-navbar">
   <div id="btn-home">
-    <%= link_to "Rentart", root_path %>
+    <%= link_to "Rentart", arts_path %>
     <span>.</span>
   </div>
-
-  <%= link_to "rent a piece", arts_path, data: {item: "rent a piece"} %>
 
   <%= form_with url: "#", class: "max-content" do |form| %>
     <%= form.text_field :search, placeholder: "What are you looking for ?" %>
@@ -13,7 +11,10 @@
     <% end %>
   <% end %>
 
-  <div class="dropdown">
-    <%= image_tag "avatar.png", id: "dropdown" %>
+  <div class="navbar-right">
+    <%= link_to "Home", root_path, data: { item: "Home" } %>
+    <div class="dropdown">
+      <%= image_tag "mona_lisa.jpg", id: "dropdown" %>
+    </div>
   </div>
 </nav>
