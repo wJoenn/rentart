@@ -1,2 +1,44 @@
-<h1>Arts#show</h1>
-<p>Find me in app/views/arts/show.html.erb</p>
+<div id="arts-show" class="container-default c-1200">
+  <div class="header">
+    <div class="header-content">
+      <h1><%= @art.title %></h1>
+      <p><%= @art.location %></p>
+    </div>
+
+    <%= link_to art_path(@art), class: "header-like" do %>
+      <i class="fa-regular fa-heart"></i>
+      <span>Save</span>
+    <% end %>
+  </div>
+
+  <div class="photos">
+    <%= cl_image_tag @art.photos.first.key, class: "photo" %>
+
+    <div class="photos-secondary">
+      <% @art.photos.drop(1).each do |photo| %>
+        <%= cl_image_tag photo.key, class: "photo" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="details">
+      <div class="user">
+        <h2><%= "#{ @art.category.name } proposed by #{ @art.user.first_name }" %></h2>
+        <% if @art.user.photo.attached? %>
+          <%= cl_image_tag @art.user.photo.key, class: "avatar" %>
+        <% else %>
+          <%# image_tag "mona_lisa.jpg", class: "avatar" %>
+        <% end %>
+      </div>
+
+      <div class="description">
+        <h4>About this Art</h4>
+        <p><%= @art.description %></p>
+      </div>
+    </div>
+
+    <div class="booking">
+    </div>
+  </div>
+</div>
