@@ -1,23 +1,19 @@
-<div class="arts-container">
-<div class="row">
-    <% @arts.each do |art| %>
-      <div class="col-sm-3 center-card">
-        <%= link_to art_path(art), class: "art-card" do %>
-          <div class="art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url('<%= cl_image_path art.photos.first.key %>');">
-            <div class="favorites-location-div">
-              <i class="fa-solid fa-heart favorites-gold"></i>
-            </div>
-          </div>
-          <div class="art-card-body">
-            <h5 class="art-card-title"><%= art.title %></h5>
-            <div>
-              <p class="art-card-text"><%= art.description %></p>
-              <p class="art_card-price">€ <%= art.price.round(2) %> per day</p>
-            </div>
-          </div>
-        <% end %>
+<div class="arts-container container-default">
+  <% @arts.each do |art| %>
+    <%= link_to art_path(art), class: "art-card" do %>
+      <div class="art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('<%= cl_image_path art.photos.first.key %>');">
+        <div class="favorites-location-div">
+          <i class="fa-solid fa-heart favorites-gold"></i>
+        </div>
+      </div>
+      <div class="art-card-body">
+        <h5 class="art-card-title"><%= art.title %></h5>
+        <div>
+          <p class="art-card-text"><%= art.description %></p>
+          <p class="art_card-price">€ <%= art.price.round(2) %> per day</p>
+        </div>
       </div>
     <% end %>
-</div>
+  <% end %>
 </div>
