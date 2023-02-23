@@ -14,7 +14,11 @@
   <div class="navbar-right">
     <%= link_to "Home", root_path, data: { item: "Home" } %>
     <div class="dropdown">
-      <%= image_tag "mona_lisa.jpg", id: "dropdown" %>
+      <% if current_user && current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, class: "avatar" %>
+      <% else %>
+        <%= image_tag "mona_lisa.jpg", class: "avatar" %>
+      <% end %>
     </div>
   </div>
 </nav>
