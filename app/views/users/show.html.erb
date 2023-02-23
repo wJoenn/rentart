@@ -31,7 +31,7 @@
     <h3>Delete your account</h3>
     <div>
       <p>Click the following link if you want to delete your account</p>
-      <%= link_to "Delete", registration_path(current_user), class: "btn-default btn-gold", method: :delete %>
+      <%= link_to "Delete", registration_path(:user), class: "btn-default btn-gold", data: { "turbo-method": :delete } %>
     </div>
   </div>
 </div>
