@@ -1,3 +1,10 @@
-<div id="users-show" class="container-default c-600">
-
+<div id="users-show" class="container-default c-1200">
+  <h1>Account Dashboard</h1>
+  <p class="welcome">Welcome <%= "#{current_user.first_name} #{current_user.last_name}" %>, what would you like to do ?</p>
+  <div class="dashboard">
+    <%= link_to edit_user_registration_path, class: "dashboard-card" do %>
+      <h3>Edit your profile</h3>
+      <p>Let us know more about you by providing personnal details</p>
+    <% end %>
+  </div>
 </div>
