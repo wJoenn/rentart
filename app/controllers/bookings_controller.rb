@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.art = Art.find(params[:art_id])
+
     if @booking.save
       redirect_to art_path(@booking.art, booked: 'true')
     else
