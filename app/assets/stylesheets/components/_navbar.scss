@@ -70,24 +70,6 @@
   }
 }
 
-.avatar {
-  border: $border-default;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 55px;
-  object-fit: cover;
-  object-position: top;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  width: 55px;
-
-  &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-// dropdown menu //
-
 .dropdown {
   position: relative;
 }
