@@ -45,7 +45,8 @@
 
   .arts-container {
     display: grid;
-    gap: 20px;
+    column-gap: 30px;
+    row-gap: 50px;
     grid-template-columns: 1fr;
 
     @media screen and (min-width: $small) {
