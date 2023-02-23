@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
 
     const options = {
-      strings: ["Rent art.", "Rentart."],
+      strings: ["Rent art", "Rentart."],
       typeSpeed: 500,
       backSpeed: 200,
       loop: false
