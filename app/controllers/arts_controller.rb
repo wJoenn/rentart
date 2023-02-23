@@ -3,10 +3,14 @@ class ArtsController < ApplicationController
 
   def index
     @arts = Art.all
+    @categories = Category.all
   end
 
   def show
     @art = Art.find(params[:id])
+    @booking = Booking.new
+
+    @booked = params[:booked] == "true" if params[:booked]
   end
 
   def new
@@ -16,6 +20,7 @@ class ArtsController < ApplicationController
   def create
     @art = Art.new(art_params)
     @art.user = current_user
+
     if Art.save
       redirect_to art_path(@art)
     else

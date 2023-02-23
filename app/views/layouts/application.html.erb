@@ -15,9 +15,13 @@
       <%= render "shared/navbar" %>
     </header>
 
-    <main>
-      <%= render "devise/shared/flashes" %>
+    <main data-controller="aos">
+      <%# render "devise/shared/flashes" %>
       <%= yield %>
     </main>
+
+    <footer>
+      <%= render "shared/footer" %>
+    </footer>
   </body>
 </html>

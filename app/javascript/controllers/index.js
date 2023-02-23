@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AosController from "./aos_controller"
+application.register("aos", AosController)
+
 import DropdownMenuController from "./dropdown_menu_controller.js"
 application.register("dropdown-menu", DropdownMenuController)
 

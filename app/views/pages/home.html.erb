@@ -1,4 +1,4 @@
-<div id="pages-home" class="container-1200">
+<div id="pages-home" class="container-default c-1200">
   <div class="banner">
     <div class="titles">
       <h3>Welcome to</h3>
@@ -15,7 +15,14 @@
 
   <div class="sign-up">
     <h2>Not registered yet?</h2>
-    <%= render "devise/registrations/form", title: "Sign up", edit: false, resource: User.new, resource_name: :user %>
+    <div id="registration-new" class="container-default c-600">
+      <%= render "devise/registrations/form", title: "Sign up", edit: false, resource: User.new, resource_name: :user %>
+
+      <div>
+        <span>Already have an account ? </span>
+        <%= link_to "Log in", new_session_path(:user), class: "form-link" %>
+      </div>
+    </div>
   </div>
 
   <div class="categories">

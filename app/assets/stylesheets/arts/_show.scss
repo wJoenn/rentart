@@ -1,0 +1,61 @@
+#arts-show {
+  margin-top: 50px;
+
+  .header {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+
+    .header-like {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+
+  .photos {
+    border-radius: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+    margin: 20px 0;
+    overflow: hidden;
+
+    .photos-secondary {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .photo {
+      aspect-ratio: 1/1;
+      background-color: black;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .main {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 420px;
+  }
+
+  .user {
+    border-bottom: $border-default;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 20px;
+    padding-bottom: 20px;
+  }
+}

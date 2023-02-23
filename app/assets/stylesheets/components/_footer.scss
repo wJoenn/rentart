@@ -1,0 +1,41 @@
+footer {
+  align-items: center;
+  background-color: $secondary-grey;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 15px;
+  width: 100%;
+
+  .description {
+    text-align: center;
+
+    a {
+      color: rgba(211, 211, 211, 0.5);
+      font-size: 14px;
+      padding-right: 5px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+
+    h3 {
+      color: lightgray;
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+
+  .icon {
+    i {
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}

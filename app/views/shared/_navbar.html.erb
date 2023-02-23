@@ -1,32 +1,40 @@
 <nav id="header-navbar">
   <div id="btn-home">
-    <%= link_to "Rentart", root_path %>
+    <%= link_to "Rentart", arts_path %>
     <span>.</span>
   </div>
 
-  <%= link_to "rent a piece", arts_path, data: {item: "rent a piece"} %>
-
   <%= form_with url: "#", class: "max-content" do |form| %>
     <%= form.text_field :search, placeholder: "What are you looking for ?" %>
-    <%= form.submit "Search", class:"btn-gold btn-default max-content" %>
+    <%= button_tag class:"btn-gold btn-default max-content" do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    <% end %>
   <% end %>
 
   <%# Dropdown avatar %>
-  <div class="dropdown" data-controller="dropdown-menu">
-    <button type="button" data-dropdown-menu-target="button" data-action="click->dropdown-menu#toggleMenu" class="btn-drop" aria-haspopup="true" aria-expanded="true">
-    </button>
+  <div class="navbar-right">
+    <%= link_to "Home", root_path, data: { item: "Home" } %>
+    <div class="dropdown" data-controller="dropdown-menu">
+      <div class="avatar" data-dropdown-menu-target="button" data-action="click->dropdown-menu#toggleMenu">
+        <% if current_user && current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key %>
+        <% else %>
+          <%= image_tag "mona_lisa.jpg" %>
+        <% end %>
+      </div>
 
-    <div class="menu-options hidden" data-dropdown-menu-target="menu">
-      <div>
-        <div class="options"  data-dropdown-menu-target="options">
-          <%= link_to "See all pieces of art", arts_path, class: "option" %>
-          <button type="submit" class="btn-gold max-content">
-            <% if current_user %>
-              <%= link_to "log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
-            <% else %>
-              <%= link_to "log in", user_session_path %>
-            <% end %>
-          </button>
+      <div class="menu-options hidden" data-dropdown-menu-target="menu">
+        <div>
+          <div class="options"  data-dropdown-menu-target="options">
+            <%= link_to "See all pieces of art", arts_path, class: "option" %>
+            <button type="submit" class="btn-gold max-content">
+              <% if current_user %>
+                <%= link_to "log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
+              <% else %>
+                <%= link_to "log in", user_session_path %>
+              <% end %>
+            </button>
+          </div>
         </div>
       </div>
     </div>

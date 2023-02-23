@@ -7,8 +7,10 @@
 @import "bootstrap/scss/bootstrap";
 @import "config/setup";
 @import "font-awesome";
+@import "aos/dist/aos.css";
 
 // Your CSS partials
+@import "arts/index";
 @import "devise/index";
 @import "pages/index";
 @import "components/index";

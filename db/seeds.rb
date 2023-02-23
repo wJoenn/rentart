@@ -12,7 +12,7 @@ puts "Categories destroyed"
 
 puts "\n=== CREATING CATEGORIES ==="
 
-5.times do
+20.times do
   name = Faker::Book.genre
   category = Category.new(name:)
 
@@ -38,7 +38,7 @@ end
 
   puts "\n=== ADDING ARTS TO #{user.first_name.upcase} #{user.last_name.upcase} ==="
 
-  5.times do
+  10.times do
     art = Art.new({
                     title: Faker::Book.title,
                     location: Faker::Address.full_address,
@@ -49,7 +49,7 @@ end
 
     art.category = Category.all.sample
 
-    2.times do
+    5.times do
       photo = URI.open("https://source.unsplash.com/random")
       art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
     end
