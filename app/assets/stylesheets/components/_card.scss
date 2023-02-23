@@ -1,34 +1,3 @@
-// does this has to be moved to container later?
-.category-card {
-  align-items: center;
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
-  color: $gold;
-  display: flex;
-  flex-shrink: 0;
-  font-family: $title-font;
-  font-size: 30px;
-  height: 125px;
-  justify-content: center;
-  min-width: 0;
-  text-align: center;
-  text-shadow: 0 0 5px black;
-  width: 250px;
-
-  @media screen and (min-width: $large) {
-    font-size: 24px;
-    height: 105px;
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-    width: 210px;
-
-    &:hover {
-      transform: scale(1);
-    }
-  }
-}
-
 .art-card {
   flex-shrink: 0;
   min-width: 0;
@@ -82,5 +51,35 @@
 
   .art-card-title {
     font-weight: bold;
+  }
+}
+
+.category-card {
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  color: $gold;
+  display: flex;
+  flex-shrink: 0;
+  font-family: $title-font;
+  font-size: 30px;
+  height: 125px;
+  justify-content: center;
+  min-width: 0;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  width: 250px;
+
+  @media screen and (min-width: $large) {
+    font-size: 24px;
+    height: 105px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    width: 210px;
+
+    &:hover {
+      transform: scale(1);
+    }
   }
 }
