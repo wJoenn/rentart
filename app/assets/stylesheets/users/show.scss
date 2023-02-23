@@ -1,0 +1,16 @@
+#users-show {
+  margin-top: 100px !important;
+
+  .dashboard {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 0 100px;
+  }
+
+  .delete div {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+  }
+}
