@@ -1,38 +1,3 @@
 <div id="arts-index">
-  <div class="category-container" data-aos="fade-up" data-aos-duration="750">
-    <div class="category-btn">
-      <i class="fa-solid fa-arrow-left"></i>
-    </div>
-
-    <div class="category-cards">
-      <% @categories.each do |c| %>
-        <%= link_to category_path(c), class:"category-card", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#{ cl_image_path c.photo.key }');" do %>
-          <span><%= c.name %></span>
-        <% end %>
-      <% end %>
-    </div>
-
-    <div class="category-btn">
-      <i class="fa-solid fa-arrow-right"></i>
-    </div>
-  </div>
-
-  <div class="arts-container container-default">
-    <% @arts.each do |art| %>
-      <%= link_to art_path(art), class: "art-card", data: { aos: "fade-up", "aos-duration": "750", "aos-delay": "100" } do %>
-        <div class="art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path art.photos.first.key %>');">
-          <i class="fa-regular fa-heart art-card-favourite"></i>
-        </div>
-
-        <div class="art-card-body">
-          <h5 class="art-card-title"><%= art.title %></h5>
-
-          <div>
-            <p class="art-card-text"><%= art.description %></p>
-            <p class="art_card-price">€ <%= art.price.round(2) %> per day</p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+  <%= render "shared/listing", arts: @arts %>
 </div>
