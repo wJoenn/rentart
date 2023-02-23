@@ -15,12 +15,6 @@ button, .btn-default {
   }
 }
 
-.btn-airbnb {
-  background-image: linear-gradient(to right, rgb(202, 86, 86), rgba(184,4,65,1));
-  border: none;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .btn-gold {
   background-color: $main-grey;
   border: 1px solid $gold;
@@ -32,24 +26,4 @@ button, .btn-default {
     background-color: $gold;
     color: $main-grey;
   }
-}
-
-.category-btn {
-  height: 115px;
-  width: 80px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.category-left-btn {
-  background: $main-grey;
-  background: linear-gradient(270deg, rgba(0,0,0,0) 0%, $main-grey 30%, $main-grey 100%);
-  justify-content: flex-start;
-}
-
-.category-right-btn {
-  background: $main-grey;
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, $main-grey 30%, $main-grey 100%);
-  justify-content: flex-end;
 }
