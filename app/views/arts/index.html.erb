@@ -6,8 +6,8 @@
 
     <div class="category-cards">
       <% @categories.each do |c| %>
-        <%= link_to category_path(c), class:"category-card", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('#{ cl_image_path c.photo.key }');" do %>
-          <p class="category-card-text"><%= c.name %></p>
+        <%= link_to category_path(c), class:"category-card", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#{ cl_image_path c.photo.key }');" do %>
+          <span><%= c.name %></span>
         <% end %>
       <% end %>
     </div>

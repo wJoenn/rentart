@@ -4,9 +4,12 @@
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    margin: 30px auto 30px !important;
-    max-width: calc(90% + 100px) !important;
-    width: calc(90% + 100px);
+    margin: 30px auto 30px;
+    width: 90%;
+
+    @media screen and (min-width: $large) {
+      width: calc(90% + 100px);
+    }
 
     .category-btn {
       align-items: center;
@@ -14,12 +17,16 @@
       border-radius: 50%;
       color: $main-grey;
       cursor: pointer;
-      display: flex;
+      display: none;
       flex-shrink: 0;
       font-size: 20px;
       height: 40px;
       justify-content: center;
       width: 40px;
+
+      @media screen and (min-width: $large) {
+        display: flex;
+      }
     }
 
     .category-cards {

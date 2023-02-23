@@ -1,30 +1,33 @@
 // does this has to be moved to container later?
 .category-card {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border-radius: 5%;
   background-position: center;
   background-size: cover;
-  min-width: 0;
-  width: 250px;
+  border-radius: 5px;
+  color: $gold;
+  display: flex;
+  flex-shrink: 0;
+  font-family: $title-font;
+  font-size: 30px;
   height: 125px;
-  font-size: 20px;
+  justify-content: center;
+  min-width: 0;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  width: 250px;
 
   @media screen and (min-width: $large) {
-    width: 200px;
-    height: 100px;
-    font-size: 16px;
+    font-size: 24px;
+    height: 105px;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+    width: 210px;
+
+    &:hover {
+      transform: scale(1);
+    }
   }
 }
-
-.category-card-text {
-  font-family: $title-font;
-  color: $gold;
-}
-
-
 
 .art-card {
   max-width: 100%;
@@ -66,4 +69,14 @@
   color: white;
   font-style: italic;
   font-weight: 600;
+}
+
+.favorites-gold {
+  color: $gold;
+}
+
+.favorites-location-div {
+  float: right;
+  margin: 20px;
+  font-size: 20px;
 }
