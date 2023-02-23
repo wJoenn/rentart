@@ -3,13 +3,5 @@
 
   <%= render "form", title: "Update account", edit: true %>
 
-  <div id="registrations-delete">
-    <h3>Delete your account</h3>
-    <div>
-      <p>Click the following link if you want to delete your account</p>
-      <%= link_to "Delete", registration_path(resource_name), class: "btn-default btn-airbnb", method: :delete %>
-    </div>
-  </div>
-
   <%= link_to "Back", :back %>
 </div>
