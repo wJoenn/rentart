@@ -15,13 +15,11 @@
   <div class="navbar-right">
     <%= link_to "Home", root_path, data: { item: "Home" } %>
     <div class="dropdown" data-controller="dropdown-menu">
-      <div class="avatar" data-dropdown-menu-target="button" data-action="click->dropdown-menu#toggleMenu">
-        <% if current_user && current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key %>
-        <% else %>
-          <%= image_tag "mona_lisa.jpg" %>
-        <% end %>
-      </div>
+      <% if current_user && current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, class: "avatar", data: { action: "click->dropdown-menu#toggleMenu", "dropdown-menu-target": "button" } %>
+      <% else %>
+        <%= image_tag "mona_lisa.jpg", class: "avatar", data: { action: "click->dropdown-menu#toggleMenu", "dropdown-menu-target": "button" } %>
+      <% end %>
 
       <div class="menu-options hidden" data-dropdown-menu-target="menu">
         <div>
