@@ -4,14 +4,14 @@ import Typed from "typed.js";
 // Connects to data-controller="typed"
 export default class extends Controller {
   connect() {
-
     const options = {
-      strings: ["Rent art", "Rentart."],
-      typeSpeed: 500,
-      backSpeed: 200,
-      loop: false
+      strings: ["R", "Rent art", "Rentart^500."],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: false,
+      showCursor: false
     }
 
-    const typed = new Typed(this.element, options);
+    new Typed(this.element, options)
   }
 }
