@@ -7,7 +7,7 @@ import { application } from "./application"
 import AosController from "./aos_controller"
 application.register("aos", AosController)
 
-import DropdownMenuController from "./dropdown_menu_controller.js"
+import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)
 
 import TypedController from "./typed_controller"
