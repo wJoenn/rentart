@@ -1,0 +1,128 @@
+#registrations-edit {
+  margin-top: 50px !important;
+
+  a {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  form {
+    align-items: flex-end;
+    border: none;
+    border-radius: 0;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 0 45px;
+    padding: 0;
+    width: 100%;
+
+    &.textarea {
+      flex-direction: column;
+    }
+
+    .form-field {
+      flex-grow: 1;
+      gap: 0;
+      width: 100%;
+
+      label {
+        margin-bottom: 5px;
+      }
+    }
+
+    .form-group {
+      flex-grow: 1;
+    }
+
+    input:not(.submit), textarea {
+      border: none;
+      border-radius: 0;
+
+      &:focus {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .submit {
+      background-color: $secondary-grey;
+      border: none;
+      border-radius: 0;
+      height: max-content;
+      width: max-content;
+
+      &:hover {
+        background-color: $gold;
+      }
+    }
+  }
+
+  .edit {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 400px 1fr;
+    padding: 50px 0;
+  }
+
+  .frame {
+    border: $border-default;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: max-content;
+    padding: 50px;
+    width: 100%;
+  }
+
+  .picture {
+    position: relative;
+    margin-bottom: 75px;
+    width: max-content;
+
+    form, label {
+      margin: 0 !important;
+    }
+
+    i {
+      background-color: $secondary-grey;
+      border: 1px solid $gold;
+      border-radius: 50%;
+      color: $gold;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 10px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $gold;
+        color: $main-grey;
+      }
+    }
+
+    .avatar {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  .summary {
+    font-size: 25px;
+    margin-top: 50px;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: $gold;
+      cursor: pointer;
+    }
+  }
+}

@@ -7,11 +7,11 @@ import { application } from "./application"
 import AosController from "./aos_controller"
 application.register("aos", AosController)
 
-import DropdownMenuController from "./dropdown_menu_controller.js"
-application.register("dropdown-menu", DropdownMenuController)
+import Carousel from 'stimulus-carousel'
+application.register('carousel', Carousel)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import DropdownMenuController from "./dropdown_menu_controller"
+application.register("dropdown-menu", DropdownMenuController)
 
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)

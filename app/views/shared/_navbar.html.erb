@@ -1,19 +1,19 @@
 <nav id="header-navbar">
-  <div id="btn-home">
+  <div id="rentart-btn">
     <%= link_to "Rentart", arts_path %>
     <span>.</span>
   </div>
 
   <%= form_with url: "#", class: "max-content" do |form| %>
     <%= form.text_field :search, placeholder: "What are you looking for ?" %>
-    <%= button_tag class:"btn-gold btn-default max-content" do %>
+    <%= button_tag class:"btn-gold max-content" do %>
       <i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
   <% end %>
 
-  <%# Dropdown avatar %>
   <div class="navbar-right">
     <%= link_to "Home", root_path, data: { item: "Home" } %>
+
     <div class="dropdown" data-controller="dropdown-menu">
       <% if current_user && current_user.photo.attached? %>
         <%= cl_image_tag current_user.photo.key, class: "avatar", data: { action: "click->dropdown-menu#toggleMenu", "dropdown-menu-target": "button" } %>
@@ -21,18 +21,17 @@
         <%= image_tag "mona_lisa.jpg", class: "avatar", data: { action: "click->dropdown-menu#toggleMenu", "dropdown-menu-target": "button" } %>
       <% end %>
 
-      <div class="menu-options hidden" data-dropdown-menu-target="menu">
-        <div>
-          <div class="options"  data-dropdown-menu-target="options">
-            <%= link_to "See all pieces of art", arts_path, class: "option" %>
-            <button type="submit" class="btn-gold max-content">
-              <% if current_user %>
-                <%= link_to "log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
-              <% else %>
-                <%= link_to "log in", user_session_path %>
-              <% end %>
-            </button>
-          </div>
+      <div class="menu height-0" data-dropdown-menu-target="menu">
+        <div class="options"  data-dropdown-menu-target="options">
+          <%= link_to "See all Arts", arts_path, class: "option" %>
+
+          <button class="btn-gold max-content">
+            <% if current_user %>
+              <%= link_to "log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
+            <% else %>
+              <%= link_to "log in", user_session_path %>
+            <% end %>
+          </button>
         </div>
       </div>
     </div>

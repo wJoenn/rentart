@@ -1,9 +1,19 @@
 #pages-home {
   .banner {
-    align-items: center;
     display: flex;
-    height: 100vh;
-    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+
+    &:hover .down {
+      opacity: 0.2;
+    }
+
+    .down {
+      margin-bottom: 20px;
+      opacity: 0;
+      text-align: center;
+      transition: opacity 0.3s ease;
+    }
   }
 
   .banner-painting {
@@ -36,9 +46,11 @@
   .titles {
     span {
       color: $gold;
+      display: block;
       font-family: $title-font;
       font-size: 150px;
       font-weight: bold;
+      height: 200px;
       text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     }
 
@@ -51,5 +63,11 @@
       justify-content: flex-end;
       margin-top: 50px;
     }
+  }
+  .up {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
   }
 }
