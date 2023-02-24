@@ -1,0 +1,31 @@
+<div id="users-security" class="container-default c-1200">
+  <h2>Login & security</h2>
+  <%= link_to "Back to dashboard", user_path %>
+
+  <%= form_with model: current_user, scope: :user, url: registration_path(:user), class: "textarea", data: { turbo: false } do |f| %>
+    <h3>Change your password</h3>
+
+    <% if alert %>
+      <div class="alert">
+        <%= alert %>
+      </div>
+    <% end %>
+
+    <div class="form-field">
+      <%= f.label :current_password %>
+      <%= f.password_field :current_password %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label "New password (6 characters minimum)" %>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :password_confirmation, "Confirm password" %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+
+    <%= f.submit "save", class: "submit btn-gold btn-default" %>
+  <% end %>
+</div>
