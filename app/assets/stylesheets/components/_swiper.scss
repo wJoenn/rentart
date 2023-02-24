@@ -1,0 +1,18 @@
+.swiper-button-prev, .swiper-button-next {
+  color: lightgrey;
+  transform: scale(0.5);
+  top: calc((100% - 110px) / 2);
+}
+
+.swiper-pagination {
+  bottom: 140px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: lightgray;
+}
+
+.swiper-wrapper {
+  height: auto !important;
+  margin-bottom: 20px;
+}
