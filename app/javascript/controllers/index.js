@@ -10,7 +10,7 @@ application.register("aos", AosController)
 import Carousel from 'stimulus-carousel'
 application.register('carousel', Carousel)
 
-import DropdownMenuController from "./dropdown_menu_controller.js"
+import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)
 
 import HelloController from "./hello_controller"

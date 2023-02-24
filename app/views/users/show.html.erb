@@ -8,6 +8,18 @@
       <p>Let us know more about you by providing personnal details</p>
     <% end %>
 
+    <%= link_to user_security_path, class: "dashboard-card" do %>
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Login & security</h3>
+      <p>Update your password & security settings</p>
+    <% end %>
+
+    <%= link_to user_path, class: "dashboard-card" do %>
+      <i class="fa-solid fa-handshake-simple"></i>
+      <h3>View your bookings</h3>
+      <p>Access a listing of all your bookings and edit them</p>
+    <% end %>
+
     <%= link_to user_path, class: "dashboard-card" do %>
       <i class="fa-regular fa-rectangle-list"></i></i>
       <h3>View your Arts</h3>
@@ -18,12 +30,6 @@
       <i class="fa-solid fa-paintbrush"></i>
       <h3>Share new Art</h3>
       <p>Create a new listing to share with the world</p>
-    <% end %>
-
-    <%= link_to user_path, class: "dashboard-card" do %>
-      <i class="fa-solid fa-handshake-simple"></i>
-      <h3>View your bookings</h3>
-      <p>Access a listing of all your bookings and edit them</p>
     <% end %>
   </div>
 

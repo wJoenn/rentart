@@ -41,13 +41,17 @@
       <%= form_with model: [@art, @booking] do |f| %>
         <h3>Book now</h3>
 
-        <div class="alert">
-          <% if @booked %>
+
+        <% if @booked %>
+          <div class="alert">
             <p style="color: lightgrey">Your booking has been sucessfully registered</p>
-          <% elsif @booked == false %>
+          </div>
+        <% elsif @booked == false %>
+          <div class="alert">
             <p>Your booking wasn't registered</p>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
+
 
         <div class="form-field">
           <%= f.label :address %>
