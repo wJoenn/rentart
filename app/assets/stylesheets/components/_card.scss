@@ -2,6 +2,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   &:hover .art-card-img {
     opacity: 0.8;
@@ -10,7 +11,7 @@
   .art-card-body {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    height: 110px;
     justify-content: space-between;
   }
 
@@ -33,7 +34,6 @@
     border-radius: 20px;
     margin-bottom: 10px;
     transition: opacity 0.3s ease;
-    width: 100%;
   }
 
   .art_card-price {
