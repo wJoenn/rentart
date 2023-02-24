@@ -46,9 +46,11 @@
   .titles {
     span {
       color: $gold;
+      display: block;
       font-family: $title-font;
       font-size: 150px;
       font-weight: bold;
+      height: 200px;
       text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     }
 
