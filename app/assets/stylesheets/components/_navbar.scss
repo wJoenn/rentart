@@ -28,6 +28,41 @@
     }
   }
 
+  .dropdown {
+    position: relative;
+
+    .height-0 {
+      max-height: 0px !important;
+    }
+
+    .menu {
+      background-color: $secondary-grey;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      height: max-content;
+      max-height: 150px;
+      position: absolute;
+      overflow: hidden;
+      right: 0;
+      top: calc(100% + 10px);
+      transition: max-height 0.3s ease;
+      width: 150px;
+      z-index: 10;
+    }
+
+    .options {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .option {
+      margin-bottom: 10px;
+      width: max-content;
+    }
+  }
+
   .navbar-right {
     align-items: center;
     display: flex;
@@ -36,7 +71,7 @@
     width: 200px;
   }
 
-  #btn-home {
+  #rentart-btn {
     align-items: center;
     color: lightgray;
     display: flex;
@@ -68,38 +103,4 @@
       }
     }
   }
-}
-
-.dropdown {
-  position: relative;
-}
-
-.menu-options {
-  background-color: $secondary-grey;
-  border-radius: 4px;
-  box-shadow: 5px 5px 10px rgb(14, 13, 13);
-  max-height: 300px;
-  height: max-content;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
-  z-index: 10;
-}
-
-.options {
-  padding: 16px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  .option {
-    padding: 10px 0px;
-    width: max-content;
-  }
-}
-
-.hidden {
-  max-height: 0px;
 }

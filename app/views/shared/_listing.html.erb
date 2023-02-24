@@ -18,10 +18,17 @@
 
   <div class="arts-container container-default">
     <% arts.each do |art| %>
-      <%= link_to art_path(art), class: "art-card", data: { aos: "fade-up", "aos-duration": "750" } do %>
-        <div class="art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path art.photos.first.key %>');">
-          <i class="fa-regular fa-heart art-card-favourite"></i>
+      <%= link_to art_path(art), class: "art-card", data: { aos: "fade-up", "aos-duration": "750", controller: "carousel", "carousel-options-value": '{ "pagination": { "el": ".swiper-pagination", "dynamicBullets": "true" }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"} }' } do %>
+        <div class="swiper-wrapper">
+          <% art.photos.each do |photo| %>
+            <div class="swiper-slide art-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path photo.key %>')"></div>
+          <% end %>
         </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
         <div class="art-card-body">
           <h5 class="art-card-title"><%= art.title %></h5>

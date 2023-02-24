@@ -1,22 +1,28 @@
 <div id="pages-home" class="container-default c-1200">
   <div class="banner">
-    <div class="titles">
-      <h3>Welcome to</h3>
-      <span data-controller="typed"></span>
-      <h3>Would you like to rent the Mona Lisa for a day?</h3>
+    <div class="up">
+      <div class="titles">
+        <h3>Welcome to</h3>
+        <span data-controller="typed">R</span>
+        <h3>Would you like to rent the Mona Lisa for a day?</h3>
 
-      <div class="titles-btn">
-        <%= link_to "Book a piece of art", arts_path, class: "btn-default btn-gold" %>
+        <div class="titles-btn">
+          <%= link_to "Book a piece of art", arts_path, class: "btn-default btn-gold" %>
+        </div>
       </div>
+
+      <%= image_tag "home_page_painting.jpg", class: "banner-painting" %>
     </div>
 
-    <%= image_tag "home_page_painting.jpg", class: "banner-painting" %>
+    <div class="down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
   </div>
 
   <div class="sign-up">
     <h2>Not registered yet?</h2>
     <div id="registration-new" class="container-default c-600">
-      <%= render "devise/registrations/form", title: "Sign up", edit: false, resource: User.new, resource_name: :user %>
+      <%= render "devise/registrations/form", resource: User.new, resource_name: :user %>
 
       <div>
         <span>Already have an account ? </span>
