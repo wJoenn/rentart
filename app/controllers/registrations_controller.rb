@@ -24,7 +24,7 @@ class RegistrationsController < Devise::RegistrationsController
           "Password confirmation #{resource.errors['password_confirmation'][0]}"
         end
 
-      redirect_to user_security_path, flash: { alert: alert }
+      redirect_to user_security_path, flash: { alert: }
     end
   end
 

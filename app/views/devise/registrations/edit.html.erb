@@ -1,7 +1,81 @@
 <div id="registrations-edit" class="container-default c-1200">
-  <h2>Edit your account</h2>
+  <h2>Edit your profile</h2>
+  <%= link_to "Back to dashboard", user_path %>
 
-  <%= render "form", title: "Update account", edit: true %>
+  <div class="edit">
+    <div class="frame">
+      <div class="picture">
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar" %>
+        <% else %>
+          <%= image_tag "mona_lisa.jpg", class: "avatar" %>
+        <% end %>
 
-  <%= link_to "Back", :back %>
+        <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), class: "textarea", data: { turbo: false } do |f| %>
+          <div class="form-field">
+            <%= f.label :photo do %>
+              <i class="fa-solid fa-paintbrush"></i>
+            <% end %>
+            <%= f.file_field :photo, style: "display: none;", onchange: "form.submit()" %>
+          </div>
+        <% end %>
+      </div>
+
+      <p class="bio"><%= current_user.bio %></p>
+
+      <div class="summary">
+        <p><span><%= current_user.arts.count %></span> Arts posted on Rentart</p>
+        <p><span><%= current_user.bookings.count %></span> Arts booked on Rentart</p>
+      </div>
+    </div>
+
+    <div class="form">
+      <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false } do |f| %>
+        <div class="form-group">
+          <div class="form-field">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+            <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("First") } %></span>
+          </div>
+
+          <div class="form-field">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+            <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Last") } %></span>
+          </div>
+        </div>
+
+        <%= f.submit "save", class: "submit btn-gold btn-default" %>
+      <% end %>
+
+      <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false } do |f| %>
+        <div class="form-field">
+          <%= f.label :birthdate %>
+          <%= f.date_field :birthdate %>
+          <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Birthdate") } %></span>
+        </div>
+
+        <%= f.submit "save", class: "submit btn-gold btn-default" %>
+      <% end %>
+
+      <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false } do |f| %>
+        <div class="form-field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autocomplete: "email" %>
+          <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Email") } %></span>
+        </div>
+
+        <%= f.submit "save", class: "submit btn-gold btn-default" %>
+      <% end %>
+
+      <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), class: "textarea", data: { turbo: false } do |f| %>
+        <div class="form-field">
+          <%= f.label :bio %>
+          <%= f.text_area :bio, rows: 6 %>
+        </div>
+
+        <%= f.submit "save", class: "submit btn-gold btn-default" %>
+      <% end %>
+    </div>
+  </div>
 </div>
