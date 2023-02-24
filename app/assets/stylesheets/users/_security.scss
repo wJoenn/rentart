@@ -1,0 +1,13 @@
+#users-security {
+  margin-top: 50px !important;
+
+  a {
+    display: inline-block;
+    margin-bottom: 50px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
