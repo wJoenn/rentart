@@ -21,8 +21,7 @@ class ArtsController < ApplicationController
   def create
     @art = Art.new(art_params)
     @art.user = current_user
-
-    if Art.save
+    if @art.save
       redirect_to art_path(@art)
     else
       render 'new', status: :unprocessable_entity
@@ -32,6 +31,6 @@ class ArtsController < ApplicationController
   private
 
   def art_params
-    params.require(:art).permit(:photos, :title, :description, :price, :location, :height, :width)
+    params.require(:art).permit(:photos, :title, :description, :price, :location, :height, :width, :category_id)
   end
 end

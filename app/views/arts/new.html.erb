@@ -1,5 +1,5 @@
 <div class="form-container">
-  <%= form_with model: @art do |f| %>
+  <%= form_with(model: @art, method: :post) do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
     <%= f.label :description %>
@@ -13,7 +13,7 @@
     <%= f.label :width %>
     <%= f.number_field :width %>
     <%= f.label :category_id %>
-    <%= f.select :category_id, @categories.map { |c| c.name }  %>
+    <%= f.select :category_id, @categories.collect { |p| [ p.name, p.id ] }%>
     <%= f.label :photos %>
     <%= f.file_field :photos %>
     <%= f.submit %>
