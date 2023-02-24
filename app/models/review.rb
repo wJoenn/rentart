@@ -7,7 +7,7 @@ class Review < ApplicationRecord
 
   private
 
-  def user_had_booked_before
-    user.bookings.map(&:art).include(art)
+  def user_has_booked_before
+    return true if user.bookings.include?(art)
   end
 end

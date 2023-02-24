@@ -5,7 +5,7 @@ class Booking < ApplicationRecord
   validates :start_date, :end_date, :address, presence: true
   validate :end_date_before_start_date
   validate :not_sooner_than_today
-  validate :availability
+  #validate :availability
 
   private
 
@@ -21,9 +21,9 @@ class Booking < ApplicationRecord
     errors.add(:start_date, "cannot be sooner than today")
   end
 
-  def availability
-    return unless art.bookings.map(&:start_date).include?(start_date)
+  # def availability
+  #   return unless art.bookings.map(&:start_date).include?(start_date)
 
-    errors.add(:start_date, "has already been booked")
-  end
+  #   errors.add(:start_date, "has already been booked")
+  # end
 end
