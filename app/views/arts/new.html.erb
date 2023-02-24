@@ -1,2 +1,27 @@
-<h1>Arts#new</h1>
-<p>Find me in app/views/arts/new.html.erb</p>
+<div class="form-container">
+  <%= form_with model: @art do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :height %>
+    <%= f.number_field :height %>
+    <%= f.label :width %>
+    <%= f.number_field :width %>
+    <%= f.label :category_id %>
+    <%= f.select :category_id, @categories.map { |c| c.name }  %>
+    <%= f.label :photos %>
+    <%= f.file_field :photos %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+still need:
+
+user guess that's already fixed
+
+ability to upload photos (working?)

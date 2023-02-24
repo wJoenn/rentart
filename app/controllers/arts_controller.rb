@@ -15,6 +15,7 @@ class ArtsController < ApplicationController
 
   def new
     @art = Art.new
+    @categories = Category.all
   end
 
   def create
