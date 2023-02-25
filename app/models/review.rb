@@ -8,8 +8,7 @@ class Review < ApplicationRecord
   private
 
   def user_has_booked_before
-    return if user.bookings.include?(art)
+    return if user.bookings.map(&:art).include?(art)
 
-    errors.add(:user, "cannot review a listing he has never booked")
-  end
+    errors.add(:user, "Sorry, you can't review a piece you have never booked")
 end
