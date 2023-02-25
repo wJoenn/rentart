@@ -7,8 +7,8 @@ import { application } from "./application"
 import AosController from "./aos_controller"
 application.register("aos", AosController)
 
-import Carousel from 'stimulus-carousel'
-application.register('carousel', Carousel)
+import BookingFormPriceController from "./booking_form_price_controller"
+application.register("booking-form-price", BookingFormPriceController)
 
 import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)

@@ -51,6 +51,26 @@
     grid-template-columns: 1fr 420px;
   }
 
+  .price-summary {
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    span {
+      color: $gold;
+    }
+
+    #total {
+      border-top: $border-default;
+      font-size: 22px;
+      font-weight: 500;
+      margin: 0;
+      padding-top: 10px;
+    }
+  }
+
   .user {
     border-bottom: $border-default;
     display: flex;
