@@ -4,6 +4,7 @@ class Review < ApplicationRecord
 
   validates :rating, presence: true, inclusion: 1..5, numericality: { only_integer: true }
   validate :user_has_booked_before
+  validates :art_id, uniqueness: { scope: :user_id, message: "You've already reviewed this piece" }
 
   private
 
