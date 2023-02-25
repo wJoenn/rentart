@@ -51,7 +51,7 @@
       <%= form_with model: resource, scope: resource_name, url: registration_path(resource_name), data: { turbo: false } do |f| %>
         <div class="form-field">
           <%= f.label :birthdate %>
-          <%= f.date_field :birthdate %>
+          <%= f.date_field :birthdate, max: 18.years.ago, onkeydown: "return false" %>
           <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Birthdate") } %></span>
         </div>
 
