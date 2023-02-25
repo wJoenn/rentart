@@ -63,7 +63,7 @@
         <div class="form-group">
           <div class="form-field">
             <%= f.label "From" %>
-            <%= f.date_field :start_date, min: Date.today, onkeydown: "return false", data: { "booking-form-price-target": "startDate", action: "change->booking-form-price#enabledEndDateField" } %>
+            <%= f.date_field :start_date, min: Date.today, onkeydown: "return false", data: { "booking-form-price-target": "startDate", action: "change->booking-form-price#enabledEndDateField change->booking-form-price#updatePrice" } %>
           </div>
 
           <div class="form-field">
