@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :arts, only: %i[index show new create] do
     resources :bookings, only: %i[create]
+    resources :reviews, only: %i[create]
   end
 
   resources :categories, only: :show
