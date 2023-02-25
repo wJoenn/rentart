@@ -5,6 +5,8 @@
 
   .mapboxgl-ctrl-geocoder--button {
     background-color: transparent;
+    box-shadow: none;
+    display: none;
   }
 
   .mapboxgl-ctrl-geocoder--input {
