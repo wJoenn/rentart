@@ -17,7 +17,7 @@
 
   <div class="form-field">
     <%= f.label :birthdate %>
-    <%= f.date_field :birthdate %>
+    <%= f.date_field :birthdate, max: 18.years.ago, onkeydown: "return false" %>
     <span class="text-red text-smaller"><%= resource.errors.full_messages.find { |m| m.match?("Birthdate") } %></span>
   </div>
 
