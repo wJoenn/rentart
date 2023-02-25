@@ -1,0 +1,33 @@
+.mapboxgl-ctrl-geocoder {
+  background-color: $secondary-grey;
+  max-width: none;
+  width: 100%;
+
+  .mapboxgl-ctrl-geocoder--button {
+    background-color: transparent;
+  }
+
+  .mapboxgl-ctrl-geocoder--input {
+    color: lightgray;
+
+    &:focus {
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.5);
+      color: lightgray;
+      outline: none;
+    }
+  }
+
+  .suggestions {
+    background-color: $secondary-grey;
+
+    a {
+      color: lightgrey !important;
+      background-color: $secondary-grey;
+    }
+
+    a:hover, .active a {
+      background-color: $secondary-grey !important;
+      color: $gold !important;
+    }
+  }
+}
