@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :arts, dependent: :destroy
   has_many :bookings, dependent: :destroy
   has_one_attached :photo
+  has_many :reviews, dependent: :destroy
 
   validates :first_name, :last_name, :birthdate, presence: true
   validate :older_than_eighteen
