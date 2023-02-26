@@ -1,11 +1,17 @@
-<div class="alert-container" data-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
+<div ata-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
+
   <% if notice %>
-    <p>congratulations!</p>
-    <%= notice %>
+    <div class="alert-container">
+      <span>✔︎</span>
+      <%= notice %>
+    </div>
   <% end %>
 
   <% if alert %>
-    <p>Sorry, something went wrong</p>
-    <%= alert %>
+    <div class="alert-container">
+      <span>⚠︎</span>
+      <%= alert %>
+    </div>
   <% end %>
+
 </div>
