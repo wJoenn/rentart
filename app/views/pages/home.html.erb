@@ -19,19 +19,19 @@
     </div>
   </div>
 
-  <div class="categories">
+  <div class="categories" data-aos="fade-up" data-aos-duration="750">
     <h2>Find by category</h2>
 
     <div class="category-cards">
       <% @categories.each do |category| %>
-        <%= link_to category_path(category), class:"category-card", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#{ cl_image_path category.photo.key }');" do %>
+        <%= link_to category_path(category), class:"category-card", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#{ cl_image_path category.photo.key }');", data: { aos: "fade-up", "aos-duration": "750" } do %>
           <span><%= category.name %></span>
         <% end %>
       <% end %>
     </div>
   </div>
 
-  <div class="sign-up">
+  <div class="sign-up" data-aos="fade-up" data-aos-duration="750">
     <h2>Not registered yet?</h2>
     <div id="registration-new" class="container-default c-600">
       <%= render "devise/registrations/form", resource: User.new, resource_name: :user %>
