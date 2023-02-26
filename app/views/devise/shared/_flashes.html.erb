@@ -5,7 +5,10 @@
 <% end %>
 
 <% if alert %>
-  <div class="alert">
-    <%= alert %>
+  <div class="alert-container">
+    <div class="alert">
+      <p>Ops, something went wrong <i class="fa-regular fa-face-sad-tear"></i></p>
+      <%= alert %>
+    </div>
   </div>
 <% end %>

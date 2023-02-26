@@ -1,0 +1,15 @@
+.alert-container{
+  color: $gold;
+
+  .fa-exclamation{
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .alert{
+    font-family: $body-font;
+    color: $gold;
+    width: 290px;
+    margin-left: 10px;
+  }
+}
