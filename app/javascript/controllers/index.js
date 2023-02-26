@@ -19,5 +19,8 @@ application.register('carousel', Carousel)
 import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)
 
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)
+
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)
