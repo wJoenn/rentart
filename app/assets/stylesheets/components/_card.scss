@@ -55,6 +55,7 @@
 
 .category-card {
   align-items: center;
+  aspect-ratio: 2 / 1;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -63,7 +64,6 @@
   flex-shrink: 0;
   font-family: $title-font;
   font-size: 30px;
-  height: 125px;
   justify-content: center;
   min-width: 0;
   text-align: center;
@@ -72,7 +72,6 @@
 
   @media screen and (min-width: $large) {
     font-size: 24px;
-    height: 105px;
     transform: scale(0.95);
     transition: transform 0.3s ease;
     width: 210px;
