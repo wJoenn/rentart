@@ -1,10 +1,10 @@
 .alert-container{
+  box-sizing: border-box;
   color: $gold;
-
-  .alert{
-    font-family: $body-font;
-    color: $gold;
-    width: 290px;
-    margin-left: 10px;
-  }
+  border: 0.5px solid $gold;
+  padding: 20px;
+  font-family: $body-font;
+  color: $gold;
+  width: 250px;
+  margin-left: 15px;
 }

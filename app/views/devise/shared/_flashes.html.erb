@@ -1,17 +1,11 @@
-<% if notice %>
-  <div class="alert-container" data-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
-    <div class="alert">
-      <p>congratulations! <i class="fa-regular fa-face-smile-beam"></i></p>
-      <%= notice %>
-    </div>
-  </div>
-<% end %>
+<div class="alert-container" data-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
+  <% if notice %>
+    <p>congratulations!</p>
+    <%= notice %>
+  <% end %>
 
-<% if alert %>
-  <div class="alert-container" data-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
-    <div class="alert">
-      <p>Oops, something went wrong <i class="fa-regular fa-face-sad-tear"></i></p>
-      <%= alert %>
-    </div>
-  </div>
-<% end %>
+  <% if alert %>
+    <p>Sorry, something went wrong</p>
+    <%= alert %>
+  <% end %>
+</div>
