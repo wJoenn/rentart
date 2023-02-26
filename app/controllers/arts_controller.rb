@@ -9,8 +9,12 @@ class ArtsController < ApplicationController
   def show
     @art = Art.find(params[:id])
     @booking = Booking.new
+    @review = Review.new
+
+    @to_time = Time.now
 
     @booked = params[:booked] == "true" if params[:booked]
+    @reviewed = params[:reviewed] == "true" if params[:reviewed]
   end
 
   def new
