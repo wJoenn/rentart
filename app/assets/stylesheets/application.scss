@@ -6,10 +6,11 @@
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "config/setup";
-@import "font-awesome";
 @import "aos/dist/aos.css";
-@import "swiper/swiper-bundle";
+@import "font-awesome";
 @import "star-rating.js/dist/star-rating.css";
+@import "swiper/swiper-bundle";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 // Your CSS partials
 @import "arts/index";

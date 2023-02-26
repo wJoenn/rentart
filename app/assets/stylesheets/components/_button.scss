@@ -15,6 +15,16 @@ button, .btn-default {
   }
 }
 
+.btn-disabled {
+  background-color: $secondary-grey !important;
+  border: none !important;
+  color: $main-grey !important;
+
+  &:hover {
+    filter: none !important;
+  }
+}
+
 .btn-gold {
   background-color: $main-grey;
   border: 1px solid $gold;
