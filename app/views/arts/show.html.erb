@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div class="main">
+  <div class="main" data-aos="fade-up" data-aos-duration="750">
     <div class="details">
       <div class="user">
         <h2><%= "#{ @art.category.name } proposed by #{ @art.user.first_name }" %></h2>
@@ -32,7 +32,7 @@
         <% end %>
       </div>
 
-      <div class="description">
+      <div class="description" data-aos="fade-up" data-aos-duration="750">
         <p><%= @art.description %></p>
       </div>
     </div>
@@ -84,6 +84,58 @@
           <p>Price per day:<span><%= @art.price.round(2) %>€/day</span></p>
           <p>Number of days:<span data-booking-form-price-target="days"></span></p>
           <p id="total">Total:<span data-booking-form-price-target="field">€</span></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="reviews" data-aos="fade-up" data-aos-duration="750">
+    <div class="reviews-form">
+      <h3 class="reviews-title"><span class="star">★</span><span> <%= @art.reviews.empty? ? "0" : @art.reviews.sum(&:rating).fdiv(@art.reviews.count).round(2) %> · <%= @art.reviews.count %> reviews</span></h3>
+      <h4>Tell us what you thought of this Art</h4>
+
+      <%= form_with model: [@art, @review] do |f| %>
+        <% if @reviewed %>
+          <div class="alert">
+            <p style="color: lightgrey">Your review has been sucessfully registered</p>
+          </div>
+        <% elsif @reviewed == false %>
+          <div class="alert">
+            <p>Your review wasn't registered</p>
+          </div>
+        <% end %>
+
+        <div class="form-field">
+          <%= f.label :comment %>
+          <%= f.text_area :comment, rows: 3 %>
+        </div>
+
+        <div class="form-field">
+          <% unless current_user %>
+            <%= f.label "You need to log in before being able to confirm" %>
+          <% end %>
+
+          <%= f.select :rating, (1..5).to_a,  { }, class: "#{ "disabled" unless current_user }", data: { controller: "star-rating" }, onchange: "form.submit()", disabled: !current_user %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="reviews-list">
+      <% @art.reviews.select { |r| r.comment != "" }.each do |review| %>
+        <div class="review" data-aos="fade-up" data-aos-duration="750">
+          <div class="reviewer">
+            <% if review.user.photo.attached? %>
+              <%= cl_image_tag review.user.photo.key, class: "avatar" %>
+            <% else %>
+              <%= image_tag "mona_lisa.jpg", class: "avatar" %>
+            <% end %>
+            <p><%= "#{review.user.first_name} #{review.user.last_name}" %></p>
+          </div>
+
+          <div class="review-content">
+            <p><i class="fa-solid fa-quote-left"></i> <%= review.comment %></p>
+            <p class="star"><%= "★" * review.rating %> <span><%= distance_of_time_in_words review.created_at, @to_time %> ago</span></p>
+          </div>
         </div>
       <% end %>
     </div>
