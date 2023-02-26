@@ -13,5 +13,8 @@ application.register("booking-form-price", BookingFormPriceController)
 import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)
 
+import HideDeviseAlertController from "./hide_devise_alert_controller"
+application.register("hide-devise-alert", HideDeviseAlertController)
+
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)
