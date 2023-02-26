@@ -1,13 +1,16 @@
 <% if notice %>
-  <div>
-    <%= notice %>
+  <div class="alert-container" data-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
+    <div class="alert">
+      <p>congratulations! <i class="fa-regular fa-face-smile-beam"></i></p>
+      <%= notice %>
+    </div>
   </div>
 <% end %>
 
 <% if alert %>
   <div class="alert-container" data-controller="hide-devise-alert" data-hide-devise-alert-target="alert">
     <div class="alert">
-      <p>Ops, something went wrong <i class="fa-regular fa-face-sad-tear"></i></p>
+      <p>Oops, something went wrong <i class="fa-regular fa-face-sad-tear"></i></p>
       <%= alert %>
     </div>
   </div>
