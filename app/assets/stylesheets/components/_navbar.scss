@@ -6,30 +6,27 @@
   width: 95%;
 
   a {
-    position: relative;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 
-    &::before {
-      bottom: 0;
+    &:hover {
       color: $gold;
-      content: attr(data-item);
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: 0.3s;
-      width: 0;
-    }
-
-    &:hover::before {
-      width: 100%;
     }
   }
 
   .dropdown {
     position: relative;
+
+    a {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $gold;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
 
     .height-0 {
       max-height: 0px !important;
@@ -40,26 +37,42 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       height: max-content;
-      max-height: 150px;
+      max-height: 220px;
       position: absolute;
       overflow: hidden;
       right: 0;
       top: calc(100% + 10px);
       transition: max-height 0.3s ease;
-      width: 150px;
+      width: 200px;
       z-index: 10;
     }
 
     .options {
-      align-items: flex-end;
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
       padding: 15px;
+      position: relative;
     }
 
     .option {
       margin-bottom: 10px;
       width: max-content;
+    }
+
+    .user {
+      border-bottom: $border-default;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+
+    #home {
+      font-size: 18px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
     }
   }
 
@@ -86,7 +99,7 @@
       font-size: 50px;
       max-width: 35px;
       overflow: hidden;
-      transition: all 0.3 ease;
+      transition: all 0.3s ease;
     }
 
     span {

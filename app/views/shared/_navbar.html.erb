@@ -12,8 +12,6 @@
   <% end %>
 
   <div class="navbar-right">
-    <%= link_to "Home", root_path, data: { item: "Home" } %>
-
     <div class="dropdown" data-controller="dropdown-menu">
       <% if current_user && current_user.photo.attached? %>
         <%= cl_image_tag current_user.photo.key, class: "avatar", data: { action: "click->dropdown-menu#toggleMenu", "dropdown-menu-target": "button" } %>
@@ -23,15 +21,23 @@
 
       <div class="menu height-0" data-dropdown-menu-target="menu">
         <div class="options"  data-dropdown-menu-target="options">
-          <%= link_to "See all Arts", arts_path, class: "option" %>
+          <%= link_to root_path, id: "home", data: { item: "Home" } do %>
+            <i class="fa-solid fa-house"></i>
+          <% end %>
 
-          <button class="btn-gold max-content">
+          <div class="user">
             <% if current_user %>
-              <%= link_to "log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
+              <h5>Hello <%= current_user.first_name %></h5>
+              <%= link_to "User account", user_path, class: "option" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "option", data: { "turbo-method": :delete } %>
             <% else %>
-              <%= link_to "log in", user_session_path %>
+              <%= link_to "Sign up", new_user_registration_path, class: "option" %>
+              <%= link_to "Log in", user_session_path, class: "option" %>
             <% end %>
-          </button>
+          </div>
+
+          <%= link_to "See the Arts", arts_path, class: "option" %>
+          <%= link_to "Create a listing", new_art_path, class: "option" %>
         </div>
       </div>
     </div>
