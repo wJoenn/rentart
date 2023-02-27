@@ -1,27 +1,26 @@
-<%= form_for @art, method: :put, url: wizard_path do |f| %>
-  <% if f.object.errors.any? %>
-    <div class="error_messages">
-      <% f.object.errors.full_messages.each do |error| %>
-        <p><%= error %></p>
-      <% end %>
+<div class="wizard-form">
+  <%= form_for @art, method: :put, url: wizard_path do |f| %>
+    <% if f.object.errors.any? %>
+      <div class="error_messages">
+        <% f.object.errors.full_messages.each do |error| %>
+          <p><%= error %></p>
+        <% end %>
+      </div>
+    <% end %>
+    <h1>Let's start with a title and description</h1>
+
+    <div class="art-form-text">
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder:"The Mona Lisa" %>
+    </div>
+
+    <div class="art-form-text textarea-holder">
+      <%= f.label :description %>
+      <%= f.text_area :description, placeholder:"Write something inspiring!" %>
+    </div>
+
+    <div class="art-submit">
+      <%= f.submit 'Submit', class:"btn-gold btn-wizard"%>
     </div>
   <% end %>
-
-  <fieldset class="art-form">
-    <h1>title and description</h1>
-
-    <div>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-
-    <div>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-    </div>
-
-    <div>
-      <%= f.submit 'Next Step' %>
-    </div>
-  </fieldset>
-<% end %>
+</div>

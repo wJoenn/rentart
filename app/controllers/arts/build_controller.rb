@@ -26,6 +26,6 @@ class Arts::BuildController < ApplicationController
   def set_params
     params[:art][:status] = step.to_s
     params[:art][:status] = "active" if step == steps.last
-    params.require(:art).permit(:title, :description, :status)
+    params.require(:art).permit(:title, :description, :status, :price, :height, :width, :location, photos: [])
   end
 end

@@ -1,0 +1,21 @@
+<div class="wizard-form">
+  <%= form_for @art, method: :put, url: wizard_path do |f| %>
+    <% if f.object.errors.any? %>
+      <div class="error_messages">
+        <% f.object.errors.full_messages.each do |error| %>
+          <p><%= error %></p>
+        <% end %>
+      </div>
+    <% end %>
+    <h1>And your price (per day)</h1>
+
+    <div class="art-form-text">
+      <%= f.label :price %>
+      <%= f.number_field :price, step: :any %>
+    </div>
+
+    <div class="art-submit">
+      <%= f.submit 'Submit', class:"btn-gold btn-wizard"%>
+    </div>
+  <% end %>
+</div>
