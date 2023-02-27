@@ -2,13 +2,14 @@
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
-  margin-left: 10px;
+  margin-left: 50px;
   background-color: rgb(26, 26, 26);
-  width: 300px;
+  width: 350px;
   color: $gold;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   border: 1px solid $gold;
+  border-radius: 15px;
   padding: 10px;
 
   span{
