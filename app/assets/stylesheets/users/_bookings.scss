@@ -1,0 +1,23 @@
+#users-bookings {
+  margin-top: 100px;
+
+  .back {
+    display: inline-block;
+    margin-bottom: 50px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .booking {
+    border-radius: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+
+  .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+    display: none !important;
+  }
+}
