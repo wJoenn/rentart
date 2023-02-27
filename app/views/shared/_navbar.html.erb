@@ -5,8 +5,8 @@
   </div>
 
   <%= form_with url: arts_path, method: :get, class: "max-content" do %>
-    <%= text_field_tag :query,
-      params[:query],
+    <%= text_field_tag :search,
+      params[:search],
       placeholder: "Find an art piece"
     %>
     <%= button_tag class: "btn-gold" do %>

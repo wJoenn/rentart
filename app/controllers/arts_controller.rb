@@ -3,8 +3,8 @@ class ArtsController < ApplicationController
 
   def index
     @categories = Category.all
-    if params[:query].present?
-      @arts = Art.global_search(params[:query])
+    if params[:search].present?
+      @arts = Art.global_search(params[:search])
     else
       @arts = Art.all
     end
