@@ -2,15 +2,24 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :art
 
-  validates :start_date, :end_date, :address, presence: true
+  validates :start_date, :end_date, :address, :price, presence: true
   validate :end_date_before_start_date, if: :dates_present?
   validate :not_sooner_than_today, if: :dates_present?
   validate :availability, if: :dates_present?
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
+  def price_formatted
+    price == price.to_i ? price.to_i : price
+  end
+
   private
 
   def availability
-    return unless art.bookings.map(&:start_date).include?(start_date)
+    bookings = art.bookings
+    bookings = bookings.reject { |booking| booking.id == id } if id
+    return unless bookings.map(&:start_date).include?(start_date)
 
     errors.add(:start_date, "has already been booked")
   end

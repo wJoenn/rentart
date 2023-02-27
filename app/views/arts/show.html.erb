@@ -38,7 +38,7 @@
     </div>
 
     <%# BOOKING FORM %>
-    <div class="booking" data-controller="booking-form-price">
+    <div class="booking" data-controller="booking-form-price" data-booking-form-price-price-value="<%= @art.price %>">
       <%= form_with model: [@art, @booking] do |f| %>
         <h3>Book now</h3>
 
@@ -52,7 +52,7 @@
           </div>
         <% end %>
 
-        <%= f.hidden_field :price, value: @art.price, data: { "booking-form-price-target": "price" }%>
+        <%= f.hidden_field :price,  data: { "booking-form-price-target": "price" }%>
 
         <div class="form-field">
           <%= f.label :address %>

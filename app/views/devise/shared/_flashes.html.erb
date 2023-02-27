@@ -1,11 +1,13 @@
 <% if notice %>
-  <div>
+  <div class="alert-container" data-controller="hide-devise-alert">
+    <span>✔︎</span>
     <%= notice %>
   </div>
 <% end %>
 
 <% if alert %>
-  <div class="alert">
+  <div class="alert-container" data-controller="hide-devise-alert">
+    <span>⚠︎</span>
     <%= alert %>
   </div>
 <% end %>

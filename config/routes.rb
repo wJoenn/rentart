@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   get "users",          to: "users#show",     as: :user
   get "users/security", to: "users#security", as: :user_security
+  get "users/bookings", to: "users#bookings", as: :user_bookings
 
   resources :arts, only: %i[index show] do
     resources :bookings, only: %i[create]
