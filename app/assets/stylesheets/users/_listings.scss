@@ -1,0 +1,67 @@
+#users-listings {
+  margin-top: 100px;
+
+  .back {
+    display: inline-block;
+    margin-bottom: 50px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .booking-card {
+    flex-direction: column;
+    height: max-content;
+
+    .booking-card-row {
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+      padding: 15px;
+    }
+
+    .booking-card-text {
+      margin: 15px;
+      max-height: 110px;
+    }
+
+    .booking-card-title {
+      margin: 0;
+    }
+
+    .image-row {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+
+    .swiper {
+      height: 200px;
+      width: 200px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .list {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .listing {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .edit-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+}

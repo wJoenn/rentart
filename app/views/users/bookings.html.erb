@@ -23,7 +23,7 @@
             <h5 class="booking-card-title"><%= booking.art.title %></h5>
 
             <% if booking.art.user.photo.attached? %>
-              <%= cl_image_tag @art.user.photo.key, class: "avatar" %>
+              <%= cl_image_tag booking.art.user.photo.key, class: "avatar" %>
             <% else %>
               <%= image_tag "mona_lisa.jpg", class: "avatar" %>
             <% end %>
