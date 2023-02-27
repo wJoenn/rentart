@@ -1,11 +1,17 @@
-<% if notice %>
-  <div>
-    <%= notice %>
-  </div>
-<% end %>
+<div class="devise-alert" data-controller="hide-devise-alert">
 
-<% if alert %>
-  <div class="alert">
-    <%= alert %>
-  </div>
-<% end %>
+  <% if notice %>
+    <div class="alert-container">
+      <span>✔︎</span>
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert %>
+    <div class="alert-container">
+      <span>⚠︎</span>
+      <%= alert %>
+    </div>
+  <% end %>
+
+</div>

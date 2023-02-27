@@ -1,0 +1,17 @@
+.alert-container{
+  position: absolute;
+  z-index: 10;
+  left: 50px;
+  background-color: $secondary-grey;
+  width: 350px;
+  color: $gold;
+  text-align: center;
+  font-size: 22px;
+  border: 1px solid $gold;
+  border-radius: 15px;
+  padding: 10px;
+
+  span{
+    font-size: 20px;
+  }
+}
