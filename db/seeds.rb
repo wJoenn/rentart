@@ -145,7 +145,7 @@ art = Art.new({
                 description: "The Thinker is a bronze sculpture by Auguste Rodin, usually placed on a stone pedestal. The work depicts a nude male figure of heroic size sitting on a rock. He is seen leaning over, his right elbow placed on his left thigh, holding the weight of his chin on the back of his right hand. The pose is one of deep thought and contemplation, and the statue is often used as an image to represent philosophy.",
                 user:,
                 price: rand(9.99..1000).round(2)
-})
+              })
 
 art.category = Category.find_by(name: "Antique")
 
@@ -174,7 +174,7 @@ art = Art.new({
                 description: "While remaining true to Millet's composition, Van Gogh uses color to depict the peaceful nature of the mid-day rest. Use of contrasting colors, blue-violet against yellow-orange brings an intensity to the work that is uniquely his style.",
                 user:,
                 price: rand(9.99..1000).round(2)
-})
+              })
 
 art.category = Category.find_by(name: "Impressionism")
 
@@ -203,7 +203,7 @@ art = Art.new({
                 description: "The album cover for The Velvet Underground & Nico is recognizable for featuring a Warhol print of a banana. Early copies of the album invited the owner to 'Peel slowly and see', and peeling back the banana skin revealed a flesh-colored banana underneath. A special machine was needed to manufacture these covers (one of the causes of the album's delayed release), but MGM paid for costs figuring that any ties to Warhol would boost sales of the album. Most reissued vinyl editions of the album do not feature the peel-off sticker; original copies of the album with the peel-sticker feature are now rare collector's items. A Japanese re-issue LP in the early 1980s was the only re-issue version to include the banana sticker for many years. On the 1996 CD reissue, the banana image is on the front cover while the image of the peeled banana is on the inside of the jewel case, beneath the CD itself. The album was re-pressed onto heavyweight vinyl in 2008, featuring a banana sticker.",
                 user:,
                 price: rand(9.99..1000).round(2)
-})
+              })
 
 art.category = Category.find_by(name: "Pop Art")
 
@@ -230,7 +230,7 @@ art = Art.new({
                 description: "The Temptation of St. Anthony is a painting by Spanish surrealist artist Salvador Dalí. Painted in 1946, it is a precursor to the body of Dalí's work commonly known as the 'classical period' or the 'Dalí Renaissance'.",
                 user:,
                 price: rand(9.99..1000).round(2)
-})
+              })
 
 art.category = Category.find_by(name: "Surrealism")
 
@@ -305,6 +305,35 @@ photo = URI.open("https://shutupandtakemyyen.com/wp-content/uploads/2020/10/Psyd
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 photo = URI.open("https://hips.hearstapps.com/hmg-prod/images/gettyimages-600031727jpg--.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+art.save!
+
+puts "#{art.title} added to the arts"
+
+art = Art.new({
+                title: "Charlie",
+                location: "Louvain La Neuve, Belgium",
+                description: "It's my cat, he's sot cute isn't he",
+                user:,
+                price: rand(9.99..1000).round(2)
+              })
+
+art.category = Category.find_by(name: "Fauvism")
+
+photo = URI.open("https://i.imgur.com/ZWUi2LG.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://i.imgur.com/ib2PpXI.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://i.imgur.com/IAtoBFT.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://i.imgur.com/bCa19XO.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://i.imgur.com/PCO6B5x.jpeg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 art.save!
@@ -543,9 +572,9 @@ puts "#{art.title} added to the arts"
 # ANA ART 8
 
 art = Art.new({
-                title: "Lunch atop a Skyscraper",
-                location: "New York",
-                description: "Lunch atop a Skyscraper is a black-and-white photograph taken on September 20, 1932, of eleven ironworkers sitting on a steel beam 850 feet (260 meters) above the ground on the sixty-ninth floor of the RCA Building in Manhattan, New York City. It was arranged as a publicity stunt, part of a campaign promoting the skyscraper. The photograph was first published in October 1932 during the construction of Rockefeller Center. In 2016 it was acquired by the Visual China Group. The image is often misattributed to Lewis Hine; the identity of the photographer remains unknown. Evidence emerged indicating it may have been taken by Charles C. Ebbets, but it was later found that other photographers had been present at the shoot as well. Many claims have been made regarding the identities of the men in the image, though only a few have been definitively identified. Ken Johnston, manager of the historic collections of Corbis, called the image as 'a piece of American history'",
+                title: "The Treachery of Images",
+                location: "Los Angeles County Museum of Art",
+                description: "The Treachery of Images (French: La Trahison des Images) is a 1929 painting by Belgian surrealist painter René Magritte. It is also known as This Is Not a Pipeand The Wind and the Song.[3] Magritte painted it when he was 30 years old. It is on display at the Los Angeles County Museum of Art. The painting shows an image of a pipe. Below it, Magritte painted, 'Ceci n'est pas une pipe', French for 'This is not a pipe'. The famous pipe. How people reproached me for it! And yet, could you stuff my pipe? No, it's just a representation, is it not? So if I had written on my picture 'This is a pipe', I'd have been lying! — René Magritte The theme of pipes with the text 'Ceci n'est pas une pipe' is extended in Les Mots et Les Images, La Clé des Songes, Ceci n'est pas une pipe (L'air et la chanson),The Tune and Also the Words, Ceci n'est pas une pomme, and Les Deux Mystères. The painting is sometimes given as an example of meta message conveyed by paralanguage, like Alfred Korzybski's 'The word is not the thing' and 'The map is not the territory', as well as Denis Diderot's This is not a story. On December 15, 1929, Paul Éluard and André Breton published an essay about poetry in La Révolution surréaliste (The Surrealist Revolution) as a reaction to the publication by poet Paul Valéry 'Notes sur la poésie' in Les Nouvelles littéraires of September 28, 1929. When Valéry wrote 'Poetry is a survival', Breton and Éluard made fun of it and wrote 'Poetry is a pipe', as a reference to Magritte's painting. In the same edition of La Révolution surréaliste, Magritte published 'Les mots et les images' (his founding text which illustrated where words play with images), his answer to the survey on love, and Je ne vois pas la [femme] cachée dans la forêt, a painting tableau surrounded by photos of sixteen surrealists with their eyes closed, including Magritte himself.",
                 user:,
                 price: rand(9.99..1000).round(2)
               })
@@ -574,9 +603,9 @@ puts "#{art.title} added to the arts"
 # ANA ART 9
 
 art = Art.new({
-                title: "The Treachery of Images",
-                location: "Los Angeles County Museum of Art",
-                description: "The Treachery of Images (French: La Trahison des Images) is a 1929 painting by Belgian surrealist painter René Magritte. It is also known as This Is Not a Pipeand The Wind and the Song.[3] Magritte painted it when he was 30 years old. It is on display at the Los Angeles County Museum of Art. The painting shows an image of a pipe. Below it, Magritte painted, 'Ceci n'est pas une pipe', French for 'This is not a pipe'. The famous pipe. How people reproached me for it! And yet, could you stuff my pipe? No, it's just a representation, is it not? So if I had written on my picture 'This is a pipe', I'd have been lying! — René Magritte The theme of pipes with the text 'Ceci n'est pas une pipe' is extended in Les Mots et Les Images, La Clé des Songes, Ceci n'est pas une pipe (L'air et la chanson),The Tune and Also the Words, Ceci n'est pas une pomme, and Les Deux Mystères. The painting is sometimes given as an example of meta message conveyed by paralanguage, like Alfred Korzybski's 'The word is not the thing' and 'The map is not the territory', as well as Denis Diderot's This is not a story. On December 15, 1929, Paul Éluard and André Breton published an essay about poetry in La Révolution surréaliste (The Surrealist Revolution) as a reaction to the publication by poet Paul Valéry 'Notes sur la poésie' in Les Nouvelles littéraires of September 28, 1929. When Valéry wrote 'Poetry is a survival', Breton and Éluard made fun of it and wrote 'Poetry is a pipe', as a reference to Magritte's painting. In the same edition of La Révolution surréaliste, Magritte published 'Les mots et les images' (his founding text which illustrated where words play with images), his answer to the survey on love, and Je ne vois pas la [femme] cachée dans la forêt, a painting tableau surrounded by photos of sixteen surrealists with their eyes closed, including Magritte himself.",
+                title: "Lunch atop a Skyscraper",
+                location: "New York",
+                description: "Lunch atop a Skyscraper is a black-and-white photograph taken on September 20, 1932, of eleven ironworkers sitting on a steel beam 850 feet (260 meters) above the ground on the sixty-ninth floor of the RCA Building in Manhattan, New York City. It was arranged as a publicity stunt, part of a campaign promoting the skyscraper. The photograph was first published in October 1932 during the construction of Rockefeller Center. In 2016 it was acquired by the Visual China Group. The image is often misattributed to Lewis Hine; the identity of the photographer remains unknown. Evidence emerged indicating it may have been taken by Charles C. Ebbets, but it was later found that other photographers had been present at the shoot as well. Many claims have been made regarding the identities of the men in the image, though only a few have been definitively identified. Ken Johnston, manager of the historic collections of Corbis, called the image as 'a piece of American history'",
                 user:,
                 price: rand(9.99..1000).round(2)
               })
@@ -646,7 +675,7 @@ user = User.create!({
                       birthdate: Date.new(1991, 10, 22)
                     })
 
-photo = URI.open("https://scontent.fcrl2-1.fna.fbcdn.net/v/t39.30808-6/282622606_10227257972500962_5341841762778350698_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ViiS6LhHjtoAX_gyQly&tn=ZnB6JIveJJ2JqrC4&_nc_ht=scontent.fcrl2-1.fna&oh=00_AfD_itwMuR4Ux2BCY_80qWYxg6dzPM49T95vlHm-IHIKWA&oe=64011675")
+photo = URI.open("https://ca.slack-edge.com/T02NE0241-U046AHU5GAH-4d0b14208867-512")
 user.photo.attach(io: photo, filename: "#{user.first_name}#{user.last_name}profilepicture.png", content_type: "image/png")
 
 puts "#{user.first_name} #{user.last_name} added to the users"
@@ -750,7 +779,7 @@ art = Art.new({
 
 art.category = Category.find_by(name: "Antique")
 
-photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Velázquez%2C_from_Prado_in_Google_Earth.jpg/720px-Las_Meninas%2C_by_Diego_Velázquez%2C_from_Prado_in_Google_Earth.jpg")
+photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/720px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 photo = URI.open("https://images.ntpl.org.uk/zooms/00000000040/40777.bro")
@@ -782,7 +811,7 @@ art.category = Category.find_by(name: "Renaissance")
 photo = URI.open("https://cdn.mediatheque.epmoo.fr/link/3c9igq/afu189jq03etu2o.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
-photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Paul_Cézanne_-_Poplars_-_Google_Art_Project.jpg/800px-Paul_Cézanne_-_Poplars_-_Google_Art_Project.jpg")
+photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Paul_C%C3%A9zanne_-_Poplars_-_Google_Art_Project.jpg/800px-Paul_C%C3%A9zanne_-_Poplars_-_Google_Art_Project.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 photo = URI.open("https://www.mba-lyon.fr/sites/mba/files/styles/crop_900_560/public/content/medias/images/2020-01/cezanne_peupliers.jpg?h=4382fd71&itok=ZiFkgrnu")
@@ -843,13 +872,13 @@ art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", co
 photo = URI.open("https://images.saatchiart.com/saatchi/1807668/art/8536985/7600872-EQKVZDHN-7.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
-photo = URI.open("https://ctl.s6img.com/society6/img/IRervo3G_wy0RnPhUqY20reIDB4/w_700/framed-prints/[…]e-for-prints-posters-shirts-bags-men-women-k-framed-prints.jpg")
-art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
-
 photo = URI.open("https://im.vsco.co/aws-us-west-2/b1fe2f/70394240/5af0b85f0813a91984000011/vsco5af0b850b82ef.jpg?w=412&dpr=2.625")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 photo = URI.open("https://m.media-amazon.com/images/I/71f85jt6zOL._SL1500_.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://www.renemagritte.org/images/rene-magritte.jpeg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 art.save!
@@ -886,28 +915,28 @@ art.save!
 puts "#{art.title} added to the arts"
 
 art = Art.new({
-                title: "Fountain",
-                location: "private collection",
-                description: "Marcel Duchamp was one of the most prolific artists of Dadaism, producing numerous infamous paintings, collages and sculptures. He is also associated with Cubism, Futurism and early conceptual art. He has had a monumental influence on 20th-century modernist art and specifically sculpture. His work reached maturity after World War I when he began using art as a tool for cultural protest.",
+                title: "Gray Tree",
+                location: "Gemeentemuseum Den Haag, The Hague",
+                description: "The Gray Tree is one of the first paintings in which Mondrian applied to a natural subject the principles of cubist composition that he was in the process of assimilating and working out in his own way. At the same time, it is a continuation of the series on the Tree theme, which began with the studies for the Red Tree of 1908. Although four years elapsed between the Red Tree and The Gray Tree, it would be a mistake not to see them like two links in a single chain of development.",
                 user:,
                 price: rand(9.99..1000).round(2)
               })
 
-art.category = Category.find_by(name: "Surrealism")
+art.category = Category.find_by(name: "Cubism")
 
-photo = URI.open("https://media.tate.org.uk/art/images/work/T/T07/T07573_10.jpg")
+photo = URI.open("https://www.piet-mondrian.org/images/paintings/gray-tree.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
-photo = URI.open("https://untappedcities.com/wp-content/uploads/2021/06/Marcel-Duchamp-Fountain-Urinal-R-Mutt-Signature-Photo-by-Alfred-Stieglitz-1917-2.jpg")
+photo = URI.open("http://www.book530.com/paintingpic/1224a2/piet-mondrian-the-grey-tree-.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
-photo = URI.open("https://d7hftxdivxxvm.cloudfront.net/?height=630&quality=80&resize_to=fill&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FHewgj2FZj1q5vvfAyJCsmg%252FThumb1.jpg&width=1200")
+photo = URI.open("http://cdn.shopify.com/s/files/1/0518/5958/7227/products/Mondrian-Arbreargente.png?v=1630725493")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
-photo = URI.open("https://cdn.britannica.com/24/181724-050-67D779F6/Fountain-replica-original-Marcel-Duchamp-1917.jpg")
+photo = URI.open("https://cdn.kastatic.org/ka-perseus-images/d8fda3a447f69f401fc23320f525ab9f1b699d76.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
-photo = URI.open("http://wertical.com/wp-content/uploads/2016/03/I9-F15-Destroyer-of-the-Duchamp-Urinal_2-e1458201746685.jpg")
+photo = URI.open("https://static.greatbigcanvas.com/images/singlecanvas_thick_none/bridgeman-art-library/the-gray-tree,2587963.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
 
 art.save!
@@ -942,5 +971,170 @@ art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", co
 art.save!
 
 puts "#{art.title} added to the arts"
+
+############################################
+# USER 4
+############################################
+
+puts "\n=== CREATING USER ==="
+
+# user = User.first
+
+user = User.create!({
+                      first_name: "Rutger", last_name: "Schoone",
+                      email: "rcschoone@gmail.com",
+                      password: "password",
+                      birthdate: Date.new(1993, 12, 22)
+                    })
+
+photo = URI.open("https://booker-premium.s3.amazonaws.com/library/90/20180802_142826406_M.JPG")
+user.photo.attach(io: photo, filename: "#{user.first_name}#{user.last_name}profilepicture.png", content_type: "image/png")
+
+puts "#{user.first_name} #{user.last_name} added to the users"
+
+puts "\n=== ADDING ARTS TO #{user.first_name.upcase} #{user.last_name.upcase} ==="
+
+art = Art.new({
+                title: "The Night Watch",
+                location: "Rijksmuseum, Amsterdam",
+                description: "Militia Company of District II under the Command of Captain Frans Banninck Cocq, also known as The Shooting Company of Frans Banning Cocq and Willem van Ruytenburch, but commonly referred to as The Night Watch, is a 1642 painting by Rembrandt van Rijn.",
+                user:,
+                price: rand(9.99..1000).round(2)
+              })
+
+art.category = Category.find_by(name: "Renaissance")
+
+photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Night_Watch_-_HD.jpg/1200px-The_Night_Watch_-_HD.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://cdn.sanity.io/images/cxgd3urn/production/cc469b98957961329848852faeab1280b60bb949-1600x1069.jpg?rect=100,115,1400,840&w=1200&h=720&q=85&fit=crop&auto=format")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://www.rijksmuseum.nl/assets/b3b688b9-d42e-446d-8235-d4c118858a90?w=1920&h=1080&fx=2568&fy=1712&c=2a5d685f5fa6d0ec511496bb4116ccc4d42c139f2d156093d516cbba307dc754")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://smarthistory.org/wp-content/uploads/2022/07/10439856305_898b00bd67_3k-scaled.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://static01.nyt.com/images/2018/10/17/arts/17NIGHTWATCH-DIRECTOR-ITEM/17NIGHTWATCH-DIRECTOR-ITEM-superJumbo.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+art.save!
+
+puts "#{art.title} added to the arts"
+
+art = Art.new({
+                title: "Lacoon and his sons",
+                location: "Vatican Museum, Rome",
+                description: "The statue of Laocoön and His Sons, also called the Laocoön Group, has been one of the most famous ancient sculptures since it was excavated in Rome in 1506 and put on public display in the Vatican Museums, where it remains today.",
+                user:,
+                price: rand(9.99..1000).round(2)
+              })
+
+art.category = Category.find_by(name: "Antique")
+
+photo = URI.open("https://ivypanda.com/essays/wp-content/uploads/2019/03/37683_1.gif")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/7/7f/Laocoon_and_His_Sons%2C_Vatican.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://smarthistory.org/wp-content/uploads/2021/08/50028119131_9841ed3e2d_6k-scaled.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://theromanguy.com/wp-content/uploads/laocoon-up-close.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://img.freepik.com/premium-photo/copy-ancient-statue-laocoon-his-sons-laocoon-was-strangled-by-sea-snakes-with-his-two-sons_271853-893.jpg?w=2000")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+art.save!
+
+puts "#{art.title} added to the arts"
+
+art = Art.new({
+                title: "Peanut butter floor",
+                location: "Voorlinden, Wassenaar",
+                description: "Peanut-Butter Platform is an artwork by Dutch artist Wim T. Schippers. It consists of a floor covered with peanut butter and nothing else. ",
+                user:,
+                price: rand(9.99..1000).round(2)
+              })
+
+art.category = Category.find_by(name: "Dadaism")
+
+photo = URI.open("https://storage.boijmans.nl/styles/exhibition_header/uploads/2017/07/31/jHuG26cpt59f5KGpD84tprgbgcPTRvZR0qYeviFa.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://storage.boijmans.nl/styles/widget_gallery_fixed_height/uploads/2017/07/31/P7IvMZsdt19lTvErOTqIT04GovfDqXlO3p8Qk9Cc.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://www.themarysue.com/wp-content/uploads/2011/05/media_xl_365712.jpg?resize=468%2C270")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://media.gettyimages.com/id/109715340/photo/a-man-spreads-peanut-butter-on-the-floor.jpg?s=1024x1024&w=gi&k=20&c=spNgu3hJIZLW2QZ_End3dPWv7JbY1cRJRKZtgXFV1Vw=")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://artatpresent.files.wordpress.com/2016/11/cropped-900x450_141882.jpg?w=1200")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+art.save!
+
+puts "#{art.title} added to the arts"
+
+art = Art.new({
+                title: "Medusa's raft",
+                location: "Louvre, Paris",
+                description: "The Raft of the Medusa originally titled Scène de Naufrage is an oil painting of 1818 by the French Baroque painter and lithographer Théodore Géricault. Completed when the artist was 27, the work has become an icon of French Romanticism.",
+                user:,
+                price: rand(9.99..1000).round(2)
+              })
+
+art.category = Category.find_by(name: "Baroque")
+
+photo = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2L0udBnIEMTuJbmsuj3Q5ACpwDijEwy2leeHX-KBFBXWh82BL8guqb30-zcEaymlfcXA&usqp=CAU")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://www.telegraph.co.uk/content/dam/Travel/2016/July/medusa-in-situ-louvre.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/The_Raft_of_the_Medusa_-_Louvre.jpg/1200px-The_Raft_of_the_Medusa_-_Louvre.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://farm5.static.flickr.com/4156/34640569325_648809cd13_m.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://cms.groupeditors.com/img/a8365d3f-fd77-40fa-9c3f-ae303ca3e90b.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+art.save!
+
+puts "#{art.title} added to the arts"
+
+art = Art.new({
+                title: "Triumph of Galatea",
+                location: "Villa Farnesina, Rome",
+                description: "The Triumph of Galatea is a fresco completed around 1512 by the Italian painter Raphael for the Villa Farnesina in Rome. The Farnesina was built for the Sienese banker Agostino Chigi, one of the richest men of that age.",
+                user:,
+                price: rand(9.99..1000).round(2)
+              })
+
+art.category = Category.find_by(name: "Renaissance")
+
+photo = URI.open("https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,cs_tinysrgb,dn_72,f_auto,fl_progressive.keep_iptc,w_1200/plezsvcjnacuipn3oqtv.jpeg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://www.hotelcolosseum.com/data/trionfo-di-galatea-2.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/the-triumph-of-galatea-detail-no3-raphael.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://www.hotelcolosseum.com/data/trionfo-di-galatea.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+photo = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rapha%C3%ABl_-_Triomphe_de_Galat%C3%A9e.jpg/1200px-Rapha%C3%ABl_-_Triomphe_de_Galat%C3%A9e.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.png", content_type: "image/png")
+
+art.save!
 
 puts "\nSeed completed in #{(Time.now - start).round}s"
