@@ -25,6 +25,9 @@ application.register("hide-devise-alert", HideDeviseAlertController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import PhotoUploaderController from "./photo_uploader_controller"
+application.register("photo-uploader", PhotoUploaderController)
+
 import StarRatingController from "./star_rating_controller"
 application.register("star-rating", StarRatingController)
 
