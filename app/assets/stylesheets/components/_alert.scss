@@ -1,9 +1,8 @@
 .alert-container{
-  box-sizing: border-box;
   position: absolute;
-  z-index: 1;
-  margin-left: 50px;
-  background-color: rgb(26, 26, 26);
+  z-index: 10;
+  left: 50px;
+  background-color: $secondary-grey;
   width: 350px;
   color: $gold;
   text-align: center;
