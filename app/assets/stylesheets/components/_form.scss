@@ -34,6 +34,17 @@
       }
   }
 
+  input[type="file"] {
+    margin-bottom: 20px;
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   textarea {
     background-color: $main-grey;
     color: white;
@@ -47,6 +58,7 @@
         color: $light-gray;
       }
   }
+
 
   h1 {
     color: white;
@@ -93,7 +105,6 @@
       }
     }
   }
-
 }
 
 form {
