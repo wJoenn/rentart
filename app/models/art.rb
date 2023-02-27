@@ -8,4 +8,15 @@ class Art < ApplicationRecord
   validates :title, :location, :description, :user, :photos, presence: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :height, :width, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true
+
+  include PgSearch::Model
+  pg_search_scope :global_search,
+  against: [ :title, :description, :location ],
+  associated_against: {
+    category: :name,
+    user: %i[first_name last_name]
+  },
+  using: {
+    tsearch: { prefix: true }
+  }
 end
