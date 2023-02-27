@@ -13,8 +13,8 @@ application.register("aos", AosController)
 import BookingFormPriceController from "./booking_form_price_controller"
 application.register("booking-form-price", BookingFormPriceController)
 
-import Carousel from 'stimulus-carousel'
-application.register('carousel', Carousel)
+import CategorySelectorController from "./category_selector_controller"
+application.register("category-selector", CategorySelectorController)
 
 import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)

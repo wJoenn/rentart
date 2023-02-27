@@ -1,6 +1,6 @@
 class Arts::BuildController < ApplicationController
   include Wicked::Wizard
-  steps :title_description_confirmation, :height_width_confirmation, :pricing_confirmation, :address_confirmation
+  steps :title_description_confirmation, :height_width_confirmation, :pricing_confirmation, :address_confirmation, :choose_categories, :upload_photos
 
   def show
     @art = Art.find(params[:art_id])
@@ -26,6 +26,7 @@ class Arts::BuildController < ApplicationController
   def set_params
     params[:art][:status] = step.to_s
     params[:art][:status] = "active" if step == steps.last
-    params.require(:art).permit(:title, :description, :status, :price, :height, :width, :location, photos: [])
+    params[:art][:category_id] = Category.find_by(name: params[:art][:category_id]).id
+    params.require(:art).permit(:title, :description, :status, :price, :height, :width, :location, :category_id, photos: [])
   end
 end

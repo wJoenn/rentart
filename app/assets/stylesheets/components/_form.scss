@@ -74,6 +74,26 @@
     align-items: center;
     justify-content: center;
   }
+  .categories {
+    height: 100vh;
+    margin-top: 50px;
+
+    h2 {
+      padding: 50px 0px;
+    }
+
+    .category-cards {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      cursor: pointer;
+
+      .category-card {
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 form {
