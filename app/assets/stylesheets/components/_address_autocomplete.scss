@@ -19,6 +19,10 @@
     }
   }
 
+  .mapboxgl-ctrl-geocoder--powered-by {
+    display: none !important;
+  }
+
   .suggestions {
     background-color: $secondary-grey;
 
