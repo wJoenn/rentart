@@ -13,11 +13,14 @@ application.register("aos", AosController)
 import BookingFormPriceController from "./booking_form_price_controller"
 application.register("booking-form-price", BookingFormPriceController)
 
-import Carousel from 'stimulus-carousel'
-application.register('carousel', Carousel)
-
 import DropdownMenuController from "./dropdown_menu_controller"
 application.register("dropdown-menu", DropdownMenuController)
+
+import HideDeviseAlertController from "./hide_devise_alert_controller"
+application.register("hide-devise-alert", HideDeviseAlertController)
+
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)
 
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)

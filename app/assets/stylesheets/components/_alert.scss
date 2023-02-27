@@ -1,13 +1,15 @@
 .alert-container{
   box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  margin-left: 10px;
   background-color: rgb(26, 26, 26);
-  margin: 0 auto;
-  width: 400px;
+  width: 300px;
   color: $gold;
   text-align: center;
   font-size: 18px;
   border: 1px solid $gold;
-  padding: 25px;
+  padding: 10px;
 
   span{
     font-size: 20px;
