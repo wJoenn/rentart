@@ -4,13 +4,12 @@
     <span>.</span>
   </div>
 
-  <%= form_with url: arts_path, method: :get, class: "d-flex max-content" do %>
+  <%= form_with url: arts_path, method: :get, class: "max-content" do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
       placeholder: "Find an art piece"
     %>
-    <%= button_tag( class: "btn-gold max-content") do %>
+    <%= button_tag( class: "btn-gold") do %>
       <i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
   <% end %>
