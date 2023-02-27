@@ -110,3 +110,14 @@ label {
     }
   }
 }
+
+.art-form {
+  form {
+    border-color: $gold;
+  }
+
+  h1 {
+    color: $gold;
+    font-family: $headers-font;
+  }
+}

@@ -17,7 +17,7 @@
   </div>
 
   <div class="arts-container container-default">
-    <% arts.each do |art| %>
+    <% arts.select(&:active?).each do |art| %>
       <%= link_to art_path(art), class: "art-card", data: { aos: "fade-up", "aos-duration": "750", controller: "carousel", "carousel-options-value": '{ "pagination": { "el": ".swiper-pagination", "dynamicBullets": "true" }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"} }' } do %>
         <div class="swiper-wrapper">
           <% art.photos.each do |photo| %>

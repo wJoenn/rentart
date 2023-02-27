@@ -21,21 +21,6 @@ class ArtsController < ApplicationController
     @reviewed = params[:reviewed] == "true" if params[:reviewed]
   end
 
-  def new
-    @art = Art.new
-  end
-
-  def create
-    @art = Art.new(art_params)
-    @art.user = current_user
-
-    if Art.save
-      redirect_to art_path(@art)
-    else
-      render 'new', status: :unprocessable_entity
-    end
-  end
-
   private
 
   def art_params

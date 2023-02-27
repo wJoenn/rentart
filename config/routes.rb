@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get "users",          to: "users#show",     as: :user
   get "users/security", to: "users#security", as: :user_security
 
-  resources :arts, only: %i[index show new create] do
+  resources :arts, only: %i[index show] do
     resources :bookings, only: %i[create]
     resources :reviews, only: %i[create]
-    resources :steps, only: %i[show update], controller: 'arts/steps'
+    resources :build, only: %i[show update create], controller: 'arts/build'
   end
 
   resources :categories, only: :show
