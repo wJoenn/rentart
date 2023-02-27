@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["alert"];
 
   connect() {
-    if (this.hasAlertTarget) {
+    if (this.element) {
       setTimeout(() => {
         this.hideAlert();
       }, 3000);
@@ -13,6 +13,6 @@ export default class extends Controller {
   }
 
   hideAlert() {
-    this.alertTarget.style.display = "none";
+    this.element.style.display = "none";
   }
 }

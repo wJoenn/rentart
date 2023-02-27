@@ -24,3 +24,6 @@ application.register("star-rating", StarRatingController)
 
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)
+
+import Carousel from 'stimulus-carousel'
+application.register('carousel', Carousel)
