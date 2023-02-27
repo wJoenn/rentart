@@ -5,11 +5,6 @@ export default class extends Controller {
   static values = { price: Number }
   static targets = ["startDate", "endDate", "price", "field", "days"]
 
-  connect() {
-    console.log("a");
-    console.log(this.priceValue);
-  }
-
   enabledEndDateField() {
     this.endDateTarget.value = ""
     this.endDateTarget.min = new Date(new Date(this.startDateTarget.value).valueOf() + 86400000).toISOString().split('T')[0]
