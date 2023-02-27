@@ -1,0 +1,55 @@
+<div id="users-bookings" class="container-default c-1200">
+  <h2>Your bookings</h2>
+  <%= link_to "Back to dashboard", user_path, class: "back" %>
+
+  <% current_user.bookings.each do |booking| %>
+    <div class="booking" , data-aos="fade-up" data-aos-duration="750">
+      <%= link_to art_path(booking.art), class: "booking-card" do %>
+        <div class="swiper" data-controller="carousel" data-carousel-options-value='{ "pagination": { "el": ".swiper-pagination", "dynamicBullets": "true" }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"} }'>
+          <div class="swiper-wrapper">
+            <% booking.art.photos.each do |photo| %>
+              <div class="swiper-slide booking-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path photo.key %>')"></div>
+            <% end %>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="booking-card-body">
+          <div class="booking-card-row">
+            <h5 class="booking-card-title"><%= booking.art.title %></h5>
+
+            <% if booking.art.user.photo.attached? %>
+              <%= cl_image_tag @art.user.photo.key, class: "avatar" %>
+            <% else %>
+              <%= image_tag "mona_lisa.jpg", class: "avatar" %>
+            <% end %>
+          </div>
+
+          <p class="booking-card-text"><%= booking.art.description %></p>
+
+          <div class="booking-card-row">
+            <div>
+              <p>From: <span class="big"><%= booking.start_date.strftime("%B %-d") %></span></p>
+              <p>To: <span class="big"><%= booking.end_date.strftime("%B %-d") %></span></p>
+            </div>
+            <div>
+              <p>Total: <span class="big"><%= booking.price_formatted %>€</span></p>
+              <button class="btn-gold">Contact owner</button>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div style="width: 100%; height: 200px;"
+        data-controller="map"
+        data-map-lat-value="<%= booking.latitude %>"
+        data-map-lng-value="<%= booking.longitude %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  <% end %>
+</div>
