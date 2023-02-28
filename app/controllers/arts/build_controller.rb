@@ -1,6 +1,12 @@
 class Arts::BuildController < ApplicationController
   include Wicked::Wizard
-  steps :title_description_confirmation, :height_width_confirmation, :pricing_confirmation, :address_confirmation, :choose_categories, :upload_photos
+  steps :new,
+        :title_description_confirmation,
+        :height_width_confirmation,
+        :pricing_confirmation,
+        :address_confirmation,
+        :choose_categories,
+        :upload_photos
 
   def show
     @art = Art.find(params[:art_id])
@@ -9,7 +15,7 @@ class Arts::BuildController < ApplicationController
 
   def update
     @art = Art.find(params[:art_id])
-    @art.update(set_params)
+    @art.update(set_params) if params[:art]
     render_wizard @art
   end
 

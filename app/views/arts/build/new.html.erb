@@ -1,0 +1,20 @@
+<div id="wizard">
+  <div id="wizard-new" class="container-default c-1200">
+    <div>
+      <div class="text">
+        <h1>We're very happy you decided to share your Art</h1>
+        <p>In these few steps we will ask you to tell us more about your Art to be able to present it as best as we can. Feel free to navigate back and forth through these pages but remember that if you quit the form your progress will be lost.<br>Alright time to get to it !</p>
+      </div>
+
+      <div class="images">
+        <%= image_tag "art_lover.svg", width: "250" %>
+        <%= image_tag "sculpting.svg", width: "350" %>
+      </div>
+    </div>
+
+    <%= link_to "Back", :back, class: "btn-default btn-gold bottom-left max-content" %>
+    <%= form_with model: @art, url: wizard_path, method: :put do |f| %>
+      <%= f.submit "next", class: "btn-default btn-gold bottom-right max-content" %>
+    <% end %>
+  </div>
+</div>
