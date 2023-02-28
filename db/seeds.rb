@@ -115,7 +115,8 @@ art = Art.new({
                 location: "Louvre, Paris",
                 description: "The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as 'the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world'. The painting's novel qualities include the subject's enigmatic expression, monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Renaissance")
@@ -144,7 +145,8 @@ art = Art.new({
                 location: "Musée Rodin, Paris",
                 description: "The Thinker is a bronze sculpture by Auguste Rodin, usually placed on a stone pedestal. The work depicts a nude male figure of heroic size sitting on a rock. He is seen leaning over, his right elbow placed on his left thigh, holding the weight of his chin on the back of his right hand. The pose is one of deep thought and contemplation, and the statue is often used as an image to represent philosophy.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Antique")
@@ -173,7 +175,8 @@ art = Art.new({
                 location: "Musée d'Orsay, Paris",
                 description: "While remaining true to Millet's composition, Van Gogh uses color to depict the peaceful nature of the mid-day rest. Use of contrasting colors, blue-violet against yellow-orange brings an intensity to the work that is uniquely his style.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Impressionism")
@@ -202,7 +205,8 @@ art = Art.new({
                 location: "Musée d'Orsay, Paris",
                 description: "The album cover for The Velvet Underground & Nico is recognizable for featuring a Warhol print of a banana. Early copies of the album invited the owner to 'Peel slowly and see', and peeling back the banana skin revealed a flesh-colored banana underneath. A special machine was needed to manufacture these covers (one of the causes of the album's delayed release), but MGM paid for costs figuring that any ties to Warhol would boost sales of the album. Most reissued vinyl editions of the album do not feature the peel-off sticker; original copies of the album with the peel-sticker feature are now rare collector's items. A Japanese re-issue LP in the early 1980s was the only re-issue version to include the banana sticker for many years. On the 1996 CD reissue, the banana image is on the front cover while the image of the peeled banana is on the inside of the jewel case, beneath the CD itself. The album was re-pressed onto heavyweight vinyl in 2008, featuring a banana sticker.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Pop Art")
@@ -229,7 +233,8 @@ art = Art.new({
                 location: "	Royal Museum of Fine Arts of Belgium, Brussels",
                 description: "The Temptation of St. Anthony is a painting by Spanish surrealist artist Salvador Dalí. Painted in 1946, it is a precursor to the body of Dalí's work commonly known as the 'classical period' or the 'Dalí Renaissance'.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Surrealism")
@@ -258,7 +263,8 @@ art = Art.new({
                 location: "City of Brussels, Brussels-Capital Region, Belgium",
                 description: "Manneken Pis is a landmark 55.5 cm (21.9 in) bronze fountain sculpture in central Brussels, Belgium, depicting a puer mingens; a naked little boy urinating into the fountain's basin. Though its existence is attested as early as the 15th century, it was designed in its current form by the Brabantine sculptor Jérôme Duquesnoy the Elder and put in place in 1618 or 1619.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Pop Art")
@@ -287,7 +293,8 @@ art = Art.new({
                 location: "National Gallery and Munch Museum, Oslo, Norway",
                 description: "The Scream is a composition created by Norwegian artist Edvard Munch in 1893. The Norwegian name of the piece is Skrik (Shriek), and the German title under which it was first exhibited is Der Schrei der Natur (The Scream of Nature). The agonized face in the painting has become one of the most iconic images of art, seen as symbolizing the anxiety of the human condition. Munch's work, including The Scream, would go on to have a formative influence on the Expressionist movement.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Dadaism")
@@ -316,7 +323,8 @@ art = Art.new({
                 location: "Louvain La Neuve, Belgium",
                 description: "It's my cat, he's sot cute isn't he",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Fauvism")
@@ -359,7 +367,8 @@ art = Art.new({
                 location: "Philadelphia, PA 19101-7646",
                 description: "Fountain is a readymade sculpture by Marcel Duchamp in 1917, consisting of a porcelain urinal signed 'R. Mutt'. In April 1917, an ordinary piece of plumbing chosen by Duchamp was submitted for an exhibition of the Society of Independent Artists, the inaugural exhibition by the Society to be staged at the Grand Central Palace in New York. When explaining the purpose of his readymade sculpture, Duchamp stated they are 'everyday objects raised to the dignity of a work of art by the artist's act of choice.'In Duchamp's presentation, the urinal's orientation was altered from its usual positioning. Fountain was not rejected by the committee, since Society rules stated that all works would be accepted from artists who paid the fee, but the work was never placed in the show area.[6] Following that removal, Fountain was photographed at Alfred Stieglitz's studio, and the photo published in the Dada journal The Blind Man. The original has been lost. The work is regarded by art historians and theorists of the avant-garde as a major landmark in 20th-century art. Sixteen replicas were commissioned from Duchamp in the 1950s and 1960s and made to his approval. Some have suggested that the original work was by the female artist Elsa von Freytag-Loringhoven who had submitted it to Duchamp as a friend, but art historians maintain that Duchamp was solely responsible for Fountain's presentation.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Dadaism")
@@ -390,7 +399,8 @@ art = Art.new({
                 location: "Museo Reina Sofía, Madrid, Spain",
                 description: "Guernica is a large 1937 oil painting by Spanish artist Pablo Picasso. It is one of his best-known works, regarded by many art critics as the most moving and powerful anti-war painting in history. It is exhibited in the Museo Reina Sofía in Madrid. The grey, black, and white painting, on a canvas 3.49 meters (11 ft 5 in) tall and 7.76 meters (25 ft 6 in) across, portrays the suffering wrought by violence and chaos. Prominent in the composition are a gored horse, a bull, screaming women, a dead baby, a dismembered soldier, and flames. Picasso painted Guernica at his home in Paris in response to the 26 April 1937 bombing of Guernica, a Basque Country town in northern Spain that was bombed by Nazi Germany and Fascist Italy at the request of the Spanish Nationalists. Upon completion, Guernica was exhibited at the Spanish display at the 1937 Paris International Exposition, and then at other venues around the world. The touring exhibition was used to raise funds for Spanish war relief.[5] The painting soon became famous and widely acclaimed, and it helped bring worldwide attention to the 1936-1939 Spanish Civil War.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Cubism")
@@ -421,7 +431,8 @@ art = Art.new({
                 location: "Waterloo Bridge, South Bank",
                 description: "Girl with Balloon (also, Balloon Girl or Girl and Balloon) is a 2002-started London series of stencil murals by the graffiti artist Banksy, depicting a young girl with her hand extended toward a red heart-shaped balloon carried away by the wind. The locations for this work include street murals in Shoreditch and the South bank in London on the Waterloo Bridge[1] and other murals were around London, though none remain there. Banksy has several times used variants of this design to support social campaigns: in 2005 about the West Bank barrier, in 2014 about the Syrian refugee crisis, and also about the 2017 UK election. A 2017 Samsung poll ranked Girl with Balloon as the United Kingdom's number one favourite artwork. bIn 2018, a framed copy of the work spontaneously shredded during an auction, by way of a mechanical device Banksy had hidden in the frame. Banksy confirmed that he was responsible for the shredding and gave the altered piece a new name, Love is in the Bin. Sotheby's said it was 'the first work in history ever created during a live auction.'",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Street Art")
@@ -452,7 +463,8 @@ art = Art.new({
                 location: "Österreichische Galerie Belvedere, Vienna, Austria",
                 description: "The Kiss (in German Der Kuss) is an oil-on-canvas painting with added gold leaf, silver and platinum by the Austrian Symbolist painter Gustav Klimt. It was painted at some point in 1907 and 1908, during the height of what scholars call his Golden Period. It was exhibited in 1908 under the title Liebespaar (the lovers) as stated in the catalogue of the exhibition. The painting depicts a couple embracing each other, their bodies entwined in elaborate beautiful robes decorated in a style influenced by the contemporary Art Nouveau style and the organic forms of the earlier Arts and Crafts movement. The painting now hangs in the Österreichische Galerie Belvedere museum in the Belvedere, Vienna, and is considered a masterpiece of Vienna Secession (local variation of Art Nouveau) and Klimt's most popular work after Portrait of Adele Bloch-Bauer I.[6] It is considered by many as a famous work of art.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Impressionism")
@@ -483,7 +495,8 @@ art = Art.new({
                 location: "Tate, London",
                 description: "The Marilyn Diptych (1962) is a silkscreen painting by American pop artist Andy Warhol depicting Marilyn Monroe. The monumental work is one of the artist's most noted of the movie star. The painting consists of 50 images. Each image of the actress is taken from the single publicity photograph from the film Niagara (1953). The underlying publicity photograph that Warhol used as a basis for his many paintings and prints of Marilyn, and the Marilyn Diptych, was owned and distributed by her movie studio. Marilyn Diptych was completed just weeks after Marilyn Monroe's death in August 1962. Silk-screening was the technique used to create this painting. The twenty-five images on the left are painted in color, the right side is black and white. The Marilyn Diptych is in the collection of the Tate.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Pop Art")
@@ -514,7 +527,8 @@ art = Art.new({
                 location: "Museum of Modern Art",
                 description: "The Persistence of Memory (Catalan: La persistència de la memòria) is a 1931 painting by artist Salvador Dalí and one of the most recognizable works of Surrealism. First shown at the Julien Levy Gallery in 1932, since 1934 the painting has been in the collection of the Museum of Modern Art (MoMA) in New York City, which received it from an anonymous donor. It is widely recognized and frequently referred to in popular culture and sometimes referred to by more descriptive titles, such as 'Melting Clocks', 'The Soft Watches' or 'The Melting Watches'.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Surrealism")
@@ -545,7 +559,8 @@ art = Art.new({
                 location: "Albright-Knox Art Gallery, Buffalo, New York",
                 description: "The Harlequin's Carnival (Spanish: Carnaval de Arlequín) is an oil painting painted by Joan Miró between 1924 and 1925. It is one of the most outstanding surrealist paintings of the artist, and it is preserved in the Albright-Knox Art Gallery in Buffalo, New York. Created between 1924 and 1925, Harlequin's Carnival is one of Joan Miró's best-known pieces. Harlequin is the name of a well-known Italian comic theater character that is generally identified by his checkered costume. The carnival' in the title of the painting may refer to Mardi Gras, the celebration that occurs before the fasting of Lent begins. In 1924, poet André Breton formed the Surrealist movement. Around the time of the group's formation, Miró started to paint in the surrealist style. Surrealism focused on dreams and the subconscious as artistic material, and Miró was able to draw from these ideas. He painted the subconscious, but also his own life experiences and memories. To combine these two sources he draws on his imagination to create magical elements in his paintings. This can even be seen in his early work, for instance in his 1922 detailist painting The Farm.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Surrealism")
@@ -576,7 +591,8 @@ art = Art.new({
                 location: "Los Angeles County Museum of Art",
                 description: "The Treachery of Images (French: La Trahison des Images) is a 1929 painting by Belgian surrealist painter René Magritte. It is also known as This Is Not a Pipeand The Wind and the Song.[3] Magritte painted it when he was 30 years old. It is on display at the Los Angeles County Museum of Art. The painting shows an image of a pipe. Below it, Magritte painted, 'Ceci n'est pas une pipe', French for 'This is not a pipe'. The famous pipe. How people reproached me for it! And yet, could you stuff my pipe? No, it's just a representation, is it not? So if I had written on my picture 'This is a pipe', I'd have been lying! — René Magritte The theme of pipes with the text 'Ceci n'est pas une pipe' is extended in Les Mots et Les Images, La Clé des Songes, Ceci n'est pas une pipe (L'air et la chanson),The Tune and Also the Words, Ceci n'est pas une pomme, and Les Deux Mystères. The painting is sometimes given as an example of meta message conveyed by paralanguage, like Alfred Korzybski's 'The word is not the thing' and 'The map is not the territory', as well as Denis Diderot's This is not a story. On December 15, 1929, Paul Éluard and André Breton published an essay about poetry in La Révolution surréaliste (The Surrealist Revolution) as a reaction to the publication by poet Paul Valéry 'Notes sur la poésie' in Les Nouvelles littéraires of September 28, 1929. When Valéry wrote 'Poetry is a survival', Breton and Éluard made fun of it and wrote 'Poetry is a pipe', as a reference to Magritte's painting. In the same edition of La Révolution surréaliste, Magritte published 'Les mots et les images' (his founding text which illustrated where words play with images), his answer to the survey on love, and Je ne vois pas la [femme] cachée dans la forêt, a painting tableau surrounded by photos of sixteen surrealists with their eyes closed, including Magritte himself.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Surrealism")
@@ -607,7 +623,8 @@ art = Art.new({
                 location: "New York",
                 description: "Lunch atop a Skyscraper is a black-and-white photograph taken on September 20, 1932, of eleven ironworkers sitting on a steel beam 850 feet (260 meters) above the ground on the sixty-ninth floor of the RCA Building in Manhattan, New York City. It was arranged as a publicity stunt, part of a campaign promoting the skyscraper. The photograph was first published in October 1932 during the construction of Rockefeller Center. In 2016 it was acquired by the Visual China Group. The image is often misattributed to Lewis Hine; the identity of the photographer remains unknown. Evidence emerged indicating it may have been taken by Charles C. Ebbets, but it was later found that other photographers had been present at the shoot as well. Many claims have been made regarding the identities of the men in the image, though only a few have been definitively identified. Ken Johnston, manager of the historic collections of Corbis, called the image as 'a piece of American history'",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Photography")
@@ -638,7 +655,8 @@ art = Art.new({
                 location: "Pompidou Centre, Paris",
                 description: "The Blue Nudes is a series of color lithographs by Henri Matisse made from cut-outs depicting nude figures in various positions. Restricted by his physical condition after his surgery for stomach cancer, Matisse began creating art by cutting and painting sheets of paper by hand and supervised the creation of the lithographs until his death in 1954. Blue Nude IV, the first of the four nudes, took a notebook of studies and two weeks' work of cutting-and-arranging before the resulting artefact satisfied him. In the event, Matisse finally arrived at his favorite pose, for all four works—intertwining legs and an arm stretching behind the neck. The posture of the nude woman is like the posture of a number of seated nudes made in the first years of the 1920s, ultimately, the posture derives from the reposed figures of Le bonheur de vivre. The second in the series, Blue Nude II, was completed in 1952. Despite the flatness of paper, the cut-outs reflect Matisse's earlier sculptures in their tangible, relief-like quality, especially the sense of volume created by the overlapping of the cut-outs. Blue Nude I, in particular, can be compared with sculptures such as La Serpentine, from 1909. The color blue signified distance and volume to Matisse. Frustrated in his attempts to successfully marry dominant and contrasting tones, the artist was moved to use solid slabs of single color early in his career, a technique that became known as Fauvism. The painted gouache cut-outs that compose the Blue Nudes were inspired by Matisse's collection of African sculpture and his visit to Tahiti, in 1930. He required another twenty years and a post-operative period of incapacity, before Matisse synthesized those African and Polynesian influences into this seminal series. After his death, the works were printed in a special 1956 issue of Verve, entitled 'Les Derniers Oeuvres de Matisse', though only the ones finished before his death bear his signature. The series was later shown at the Museum of Modern Art (MoMA) from October 2014 to February 2015 as part of the exhibition Henri Matisse: The Cut-Outs",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Fauvism")
@@ -687,7 +705,8 @@ art = Art.new({
                 location: "Museo del Prado, Madrid",
                 description: "As little is known of Bosch's life or intentions, interpretations of his artistic intent behind the work range from an admonition of worldly fleshy indulgence, to a dire warning on the perils of life's temptations, to an evocation of ultimate sexual joy. The intricacy of its symbolism, particularly that of the central panel, has led to a wide range of scholarly interpretations over the centuries.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Antique")
@@ -716,7 +735,8 @@ art = Art.new({
                 location: "MoMA, New York",
                 description: "During the year Van Gogh stayed at the asylum in Saint-Rémy-de-Provence, the prolific output of paintings he had begun in Arles continued.[14] During this period, he produced some of the best-known works of his career, including the Irises from May 1889, now in the J. Paul Getty Museum, and the blue self-portrait from September, 1889, in the Musée d'Orsay. The Starry Night was painted mid-June by around 18 June, the date he wrote to his brother Theo to say he had a new study of a starry sky.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Impressionism")
@@ -745,7 +765,8 @@ art = Art.new({
                 location: "Louvre, Paris",
                 description: "The Venus de Milo is believed to depict Aphrodite, the Greek goddess of love, whose Roman counterpart was Venus. The sculpture is sometimes called the Aphrodite de Milos, due to the imprecision of naming the Greek sculpture after a Roman deity (Venus).[2] Some scholars theorize that the statue actually represents the sea-goddess Amphitrite, who was venerated on the island in which the statue was found.[3] The work was originally attributed to the 4th century BC Athenian sculptor Praxiteles, but, based upon an inscription on its plinth, it is now widely agreed that the statue was created later, and instead is the work of Alexandros of Antioch.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Antique")
@@ -774,7 +795,8 @@ art = Art.new({
                 location: "Museo del Prado, Madrid",
                 description: "The painting is believed by F. J. Sánchez Cantón to depict a room in the Royal Alcazar of Madrid during the reign of King Philip IV of Spain, and presents several figures, most identifiable from the Spanish court, captured in a particular moment as if in a snapshot.[b][2] Some of the figures look out of the canvas towards the viewer, while others interact among themselves.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Antique")
@@ -803,7 +825,8 @@ art = Art.new({
                 location: " Musée d'Orsay, Paris",
                 description: "his painting probably represents the exterior of the park of the castle of Marcouville, just next to Pontoise. Cézanne's interest in this landscape is perhaps linked to the fact that his friend Camille Pissarro had already painted there five years earlier.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Renaissance")
@@ -832,7 +855,8 @@ art = Art.new({
                 location: "Musée Marmottan Monet, Paris",
                 description: "Monet visited his hometown of Le Havre in the Northwest of France in 1872 and proceeded to create a series of works depicting the port of Le Havre. The six painted canvases depict the port during dawn, day, dusk, and dark and from varying viewpoints, some from the water itself and others from a hotel room looking down over the port.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Impressionism")
@@ -861,7 +885,8 @@ art = Art.new({
                 location: "MoMA, New York",
                 description: "In this unsettling image—the first in a series of four variations of Les Amants that Magritte painted in 1928—the artist invokes the cinematic cliché of a close–up kiss but subverts our voyeuristic pleasure by shrouding the faces in cloth. The device of a draped cloth or veil to conceal a figure’s identity corresponds to a larger Surrealist interest in masks, disguises, and what lies beyond or beneath visible surfaces.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Impressionism")
@@ -890,7 +915,8 @@ art = Art.new({
                 location: "Tate Modern, London",
                 description: "Metamorphosis of Narcissus is an oil-on-canvas painting by the Spanish surrealist Salvador Dalí. Originally titled Métamorphose de Narcisse, this painting is from Dalí's paranoiac-critical period and depicts his interpretation of the Greek myth of Narcissus.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Surrealism")
@@ -919,7 +945,8 @@ art = Art.new({
                 location: "Gemeentemuseum Den Haag, The Hague",
                 description: "The Gray Tree is one of the first paintings in which Mondrian applied to a natural subject the principles of cubist composition that he was in the process of assimilating and working out in his own way. At the same time, it is a continuation of the series on the Tree theme, which began with the studies for the Red Tree of 1908. Although four years elapsed between the Red Tree and The Gray Tree, it would be a mistake not to see them like two links in a single chain of development.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Cubism")
@@ -948,7 +975,8 @@ art = Art.new({
                 location: "National Gallery, Denmark",
                 description: "Henri Matisse was a French painter, draughtsman and sculptor who was a leader of the Fauvism movement. He met many other artists and produced numerous masterpieces between 1900 and 1910, although he continued to paint for nearly 50 years after the movement. His expressive use of color and emotion in painting gained critical acclaim and his work is considered extremely influential to 20th-century art.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Fauvism")
@@ -999,7 +1027,8 @@ art = Art.new({
                 location: "Rijksmuseum, Amsterdam",
                 description: "Militia Company of District II under the Command of Captain Frans Banninck Cocq, also known as The Shooting Company of Frans Banning Cocq and Willem van Ruytenburch, but commonly referred to as The Night Watch, is a 1642 painting by Rembrandt van Rijn.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Renaissance")
@@ -1028,7 +1057,8 @@ art = Art.new({
                 location: "Vatican Museum, Rome",
                 description: "The statue of Laocoön and His Sons, also called the Laocoön Group, has been one of the most famous ancient sculptures since it was excavated in Rome in 1506 and put on public display in the Vatican Museums, where it remains today.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Antique")
@@ -1057,7 +1087,8 @@ art = Art.new({
                 location: "Voorlinden, Wassenaar",
                 description: "Peanut-Butter Platform is an artwork by Dutch artist Wim T. Schippers. It consists of a floor covered with peanut butter and nothing else. ",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Dadaism")
@@ -1086,7 +1117,8 @@ art = Art.new({
                 location: "Louvre, Paris",
                 description: "The Raft of the Medusa originally titled Scène de Naufrage is an oil painting of 1818 by the French Baroque painter and lithographer Théodore Géricault. Completed when the artist was 27, the work has become an icon of French Romanticism.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Baroque")
@@ -1115,7 +1147,8 @@ art = Art.new({
                 location: "Villa Farnesina, Rome",
                 description: "The Triumph of Galatea is a fresco completed around 1512 by the Italian painter Raphael for the Villa Farnesina in Rome. The Farnesina was built for the Sienese banker Agostino Chigi, one of the richest men of that age.",
                 user:,
-                price: rand(9.99..1000).round(2)
+                price: rand(9.99..1000).round(2),
+                status: "active"
               })
 
 art.category = Category.find_by(name: "Renaissance")

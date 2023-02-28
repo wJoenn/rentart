@@ -6,14 +6,12 @@ class Art < ApplicationRecord
 
   attr_accessor :form_step
 
-  # associations
   belongs_to :user
-  belongs_to :category, optional: true
+  belongs_to :category
   has_many_attached :photos
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
 
-  # validations + required for step method
   validates :title, :description, presence: true, if: :active_or_title_and_description?
   validates :height, :width, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true, if: :active_or_height_and_width?
   validates :price, presence: true, numericality: { greater_than: 0 }, if: :active_or_pricing?
@@ -38,19 +36,10 @@ class Art < ApplicationRecord
   def active?
     status == "active"
   end
-  # commented out for wizard reasons
-  # validates :title, :location, :description, :user, :photos, presence: true
-  # validates :price, presence: true, numericality: { greater_than: 0 }
-  # validates :height, :width, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true
 
-  # search function
   include PgSearch::Model
   pg_search_scope :global_search,
-  against: %i[title description location],
-  associated_against: {
-    user: %i[first_name last_name]
-  },
-  using: {
-    tsearch: { prefix: true }
-  }
+                  against: %i[title description location],
+                  associated_against: { user: %i[first_name last_name] },
+                  using: { tsearch: { prefix: true } }
 end
