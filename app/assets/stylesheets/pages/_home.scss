@@ -36,7 +36,13 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
 
       .category-card {
+        transition: transform 0.3s ease;
         width: 100%;
+
+        &:hover {
+          color: $gold;
+          transform: scale(1.1);
+        }
       }
     }
   }

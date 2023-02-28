@@ -11,14 +11,14 @@
 
     <div data-controller="photo-uploader">
       <div class="photos">
-        <%= f.file_field :photos, :multiple => true, :data => {:action => "photo-uploader#addFile"}, title: "This is were your photo will be" %>
+        <%= f.file_field :photos, multiple: true, data: { action: "photo-uploader#addFile" }, title: "This is were your photo will be" %>
       </div>
 
       <div data-photo-uploader-target="files"></div>
     </div>
 
     <div class="art-submit">
-      <%= f.submit 'Submit', class:"btn-gold btn-wizard"%>
+      <%= f.submit 'Submit', class:"btn-gold btn-wizard" %>
     </div>
   <% end %>
 </div>

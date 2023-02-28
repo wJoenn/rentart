@@ -3,7 +3,7 @@
   <%= link_to "Back to dashboard", user_path, class: "back" %>
 
   <div class="list">
-    <% current_user.arts.each do |art| %>
+    <% current_user.arts.select(&:active?).each do |art| %>
       <div class="listing" data-aos="fade-up" data-aos-duration="750">
       <%= link_to art_path(art), class: "booking-card" do %>
         <div class="booking-card-row">
@@ -30,7 +30,7 @@
       <% end %>
 
       <div class="edit-button">
-        <%= link_to "Edit listing", edit_art_path(art), class: "btn-default btn-gold" %>
+        <%= link_to "Edit listing", art_path(art), class: "btn-default btn-gold" %>
         <%= link_to "Delete listing", art_path(art), class: "btn-default btn-gold", data: { "turbo-method": :delete } %>
       </div>
       </div>
