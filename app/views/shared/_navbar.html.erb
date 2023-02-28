@@ -40,7 +40,7 @@
           </div>
 
           <%= link_to "See the Arts", arts_path, class: "option" %>
-          <%= link_to "Create a listing", new_art_path, class: "option" %>
+          <%= link_to 'Create an art listing', "/arts/building/build", data: { "turbo-method": :post }, class: "option" %>
         </div>
       </div>
     </div>

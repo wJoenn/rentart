@@ -40,3 +40,5 @@ Style/EmptyMethod:
   Enabled: true
 Bundler/OrderedGems:
   Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
