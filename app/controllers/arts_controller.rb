@@ -15,8 +15,10 @@ class ArtsController < ApplicationController
     @booking = Booking.new
     @review = Review.new
 
-    @rating = @art.reviews.sum(&:rating).fdiv(@art.reviews.count).round(2)
-    @rating = @rating.to_i if @rating == @rating.to_i
+    if @art.reviews.any?
+      @rating = @art.reviews.sum(&:rating).fdiv(@art.reviews.count).round(2)
+      @rating = @rating.to_i if @rating == @rating.to_i
+    end
 
     @to_time = Time.now
 
