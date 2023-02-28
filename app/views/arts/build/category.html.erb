@@ -2,11 +2,11 @@
   <div id="wizard-categories" class="container-default c-1200" data-controller="category-selector">
     <h2  data-aos="fade-up" data-aos-duration="750">Which of these categories would best describe your Art ?</h2>
 
-    <%= link_to "Back", :back, class: "btn-default btn-gold bottom-left max-content" %>
+    <%= link_to "Back", "/arts/#{ @art.id }/build/new", class: "btn-default btn-gold bottom-left max-content" %>
 
     <%= form_for @art, method: :put, url: wizard_path do |f| %>
       <%= f.hidden_field :category_id, data: { "category-selector-target": "field" } %>
-      <%= f.submit "next", class: "btn-default btn-gold bottom-right max-content btn-disabled", disabled: true, data: { "category-selector-target": "button" } %>
+      <%= f.submit "Next", class: "btn-default btn-gold bottom-right max-content btn-disabled", disabled: true, data: { "category-selector-target": "button" } %>
     <% end %>
 
     <div class="category-cards" data-aos="fade-up" data-aos-duration="750">

@@ -408,16 +408,16 @@ art.category = Category.find_by(name: "Cubism")
 photo = URI.open("https://www.infoescola.com/wp-content/uploads/2009/08/guernica.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.jpg", content_type: "image/jpg")
 
-photo = URI.open("https://emptyeasel.com/wp-content/uploads/2019/04/electric-bulb-oil-lamp-bird-horse.jpg")
+photo = URI.open("https://blog.artsper.com/wp-content/uploads/2019/02/guernica-kid-644x430.jpg")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.jpg", content_type: "image/jpg")
 
 photo = URI.open("https://emptyeasel.com/wp-content/uploads/2019/04/electric-bulb-oil-lamp-bird-horse.jpg")
-art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.jpg", content_type: "image/jpg")
-
-photo = URI.open("https://tourismmedia.italia.it/is/image/mitur/1600x1000_picasso_nuoro_1-1?wid=850&hei=500&fit=constrain,1&fmt=webp")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.jpg", content_type: "image/jpg")
 
 photo = URI.open("https://www.guggenheim.org/wp-content/uploads/2012/10/picasso_L3.jpg")
+art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.jpg", content_type: "image/jpg")
+
+photo = URI.open("https://tourismmedia.italia.it/is/image/mitur/1600x1000_picasso_nuoro_1-1?wid=850&hei=500&fit=constrain,1&fmt=webp")
 art.photos.attach(io: photo, filename: "#{art.title}#{rand(1..999_999)}.jpg", content_type: "image/jpg")
 
 art.save!

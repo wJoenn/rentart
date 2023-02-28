@@ -22,8 +22,10 @@
       <%= yield %>
     </main>
 
-    <footer>
-      <%= render "shared/footer" %>
-    </footer>
+    <% unless @disable %>
+      <footer>
+        <%= render "shared/footer" %>
+      </footer>
+    <% end %>
   </body>
 </html>

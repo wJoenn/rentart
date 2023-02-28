@@ -36,3 +36,6 @@ application.register("star-rating", StarRatingController)
 
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)
+
+import UpdateMapController from "./update_map_controller"
+application.register("update-map", UpdateMapController)

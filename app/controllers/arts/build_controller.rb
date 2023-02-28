@@ -1,11 +1,13 @@
 class Arts::BuildController < ApplicationController
+  before_action :disable_footer
+
   include Wicked::Wizard
   steps :new,
-        :choose_categories,
+        :category,
+        :location,
         :title_description_confirmation,
         :height_width_confirmation,
         :pricing_confirmation,
-        :address_confirmation,
         :upload_photos
 
   def show
@@ -15,7 +17,7 @@ class Arts::BuildController < ApplicationController
 
   def update
     @art = Art.find(params[:art_id])
-    @art.update!(set_params) if params[:art]
+    @art.update(set_params) if params[:art]
     render_wizard @art
   end
 
@@ -28,6 +30,10 @@ class Arts::BuildController < ApplicationController
   end
 
   private
+
+  def disable_footer
+    @disable = true
+  end
 
   def set_params
     params[:art][:status] = step.to_s

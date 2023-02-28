@@ -1,5 +1,11 @@
 <div id="wizard">
   <div id="wizard-new" class="container-default c-1200">
+
+    <%= link_to "Back", user_path, class: "btn-default btn-gold bottom-left max-content" %>
+    <%= form_with model: @art, url: wizard_path, method: :put do |f| %>
+      <%= f.submit "Next", class: "btn-default btn-gold bottom-right max-content" %>
+    <% end %>
+
     <div>
       <div class="text">
         <h1>We're very happy you decided to share your Art</h1>
@@ -11,10 +17,5 @@
         <%= image_tag "sculpting.svg", width: "350" %>
       </div>
     </div>
-
-    <%= link_to "Back", :back, class: "btn-default btn-gold bottom-left max-content" %>
-    <%= form_with model: @art, url: wizard_path, method: :put do |f| %>
-      <%= f.submit "next", class: "btn-default btn-gold bottom-right max-content" %>
-    <% end %>
   </div>
 </div>
