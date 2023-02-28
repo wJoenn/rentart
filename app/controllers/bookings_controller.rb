@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.art = Art.find(params[:art_id])
 
     if @booking.save
-      redirect_to art_path(@booking.art, booked: 'true')
+      redirect_to user_bookings_path
     else
       redirect_to art_path(@booking.art, booked: 'false')
     end

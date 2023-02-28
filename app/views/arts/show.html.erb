@@ -91,7 +91,7 @@
 
   <div class="reviews" data-aos="fade-up" data-aos-duration="750">
     <div class="reviews-form">
-      <h3 class="reviews-title"><span class="star">★</span><span> <%= @art.reviews.empty? ? "0" : @art.reviews.sum(&:rating).fdiv(@art.reviews.count).round(2) %> · <%= @art.reviews.count %> reviews</span></h3>
+      <h3 class="reviews-title"><span class="star">★</span><span> <%= @art.reviews.empty? ? "0" : @rating %> · <%= @art.reviews.count %> reviews</span></h3>
       <h4>Tell us what you thought of this Art</h4>
 
       <%= form_with model: [@art, @review] do |f| %>
@@ -115,7 +115,7 @@
             <%= f.label "You need to log in before being able to confirm" %>
           <% end %>
 
-          <%= f.select :rating, (1..5).to_a,  { }, class: "#{ "disabled" unless current_user }", data: { controller: "star-rating" }, onchange: "form.submit()", disabled: !current_user %>
+          <%= f.select :rating, (0..5).to_a,  { }, class: "#{ "disabled" unless current_user }", data: { controller: "star-rating" }, onchange: "form.submit()", disabled: !current_user %>
         </div>
       <% end %>
     </div>
