@@ -13,7 +13,7 @@ export default class extends Controller {
 
   #hideAlert() {
     this.element.style.maxHeight = "0px";
-    this.element.style.padding = "0px"
+    this.element.style.padding = "0px 20px"
     this.element.style.opacity = "0";
   }
 

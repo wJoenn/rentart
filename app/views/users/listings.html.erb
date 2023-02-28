@@ -1,0 +1,39 @@
+<div id="users-listings" class="container-default c-1200">
+  <h2>Your listings</h2>
+  <%= link_to "Back to dashboard", user_path, class: "back" %>
+
+  <div class="list">
+    <% current_user.arts.each do |art| %>
+      <div class="listing" data-aos="fade-up" data-aos-duration="750">
+      <%= link_to art_path(art), class: "booking-card" do %>
+        <div class="booking-card-row">
+          <h5 class="booking-card-title"><%= art.title %></h5>
+          <p>Price: <span class="big"><%= art.price.round(2) %>€</span></p>
+        </div>
+
+        <div class="image-row">
+          <div class="swiper" data-controller="carousel" data-carousel-options-value='{ "pagination": { "el": ".swiper-pagination", "dynamicBullets": "true" }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"} }'>
+            <div class="swiper-wrapper">
+              <% art.photos.each do |photo| %>
+                <div class="swiper-slide booking-card-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path photo.key %>')"></div>
+              <% end %>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <p class="booking-card-text"><%= art.description %></p>
+        </div>
+      <% end %>
+
+      <div class="edit-button">
+        <%= link_to "Edit listing", edit_art_path(art), class: "btn-default btn-gold" %>
+        <%= link_to "Delete listing", art_path(art), class: "btn-default btn-gold", data: { "turbo-method": :delete } %>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>

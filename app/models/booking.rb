@@ -19,7 +19,11 @@ class Booking < ApplicationRecord
   def availability
     bookings = art.bookings
     bookings = bookings.reject { |booking| booking.id == id } if id
-    return unless bookings.map(&:start_date).include?(start_date)
+    dates = bookings.pluck(:start_date, :end_date).map do |range|
+      (range[0]..range[1]).to_a
+    end
+
+    return if (dates.flatten & (start_date..end_date).to_a).empty?
 
     errors.add(:start_date, "has already been booked")
   end
