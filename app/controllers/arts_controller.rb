@@ -2,7 +2,7 @@ class ArtsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @categories = Category.all
+    @categories = Category.order(:name)
     if params[:search].present?
       @arts = Art.global_search(params[:search])
     else

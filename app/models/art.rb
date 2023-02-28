@@ -1,7 +1,7 @@
 class Art < ApplicationRecord
   # required for multiform
   cattr_accessor :form_steps do
-    %w[new title_description_confirmation height_width_confirmation pricing_confirmation address_confirmation choose_categories upload_photos]
+    %w[new choose_categories title_description_confirmation height_width_confirmation pricing_confirmation address_confirmation upload_photos]
   end
 
   attr_accessor :form_step
