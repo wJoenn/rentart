@@ -21,6 +21,12 @@ class ArtsController < ApplicationController
     @reviewed = params[:reviewed] == "true" if params[:reviewed]
   end
 
+  def destroy
+    @art = Art.find(params[:id])
+    @art.destroy!
+    redirect_to user_listings_path
+  end
+
   private
 
   def art_params

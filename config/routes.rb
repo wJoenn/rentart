@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "users/bookings", to: "users#bookings", as: :user_bookings
   get "users/listings", to: "users#listings", as: :user_listings
 
-  resources :arts, only: %i[index show delete] do
+  resources :arts, only: %i[index show destroy] do
     resources :bookings, only: %i[create]
     resources :reviews, only: %i[create]
     resources :build, only: %i[show update create], controller: 'arts/build'
