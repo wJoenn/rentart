@@ -3,11 +3,10 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="address-autocomplete"
 export default class extends Controller {
-  static values = { apiKey: String }
+  static values = { apiKey: String, show: Boolean }
   static targets = ["address", "map"]
 
   connect() {
-    console.log("z")
     this.geocoder = new MapboxGeocoder({
       accessToken: this.apiKeyValue,
       types: "country,region,place,postcode,locality,neighborhood,address"
@@ -16,12 +15,10 @@ export default class extends Controller {
     this.geocoder.addTo(this.element)
     this.geocoder.on("result", event => {
       this.#setInputValue(event)
-      this.#fetchCoords(event)
-      this.mapTarget.remove()
+      if (this.showValue) this.#fetchCoords(event)
     })
-    this.geocoder.on("clear", () => this.#clearInputValue())
 
-    // this.#addMap()
+    this.geocoder.on("clear", () => this.#clearInputValue())
   }
 
   disconnect() {
@@ -37,6 +34,7 @@ export default class extends Controller {
 
 
   #addMap(coords) {
+    this.mapTarget.remove()
     const html = `<div style="width: 100%; height: 800px; transform: scale(1.1); margin-top: -30px; border-radius: 20px; z-index: -10;"
     data-controller="map"
     data-map-lat-value="${coords[1]}"

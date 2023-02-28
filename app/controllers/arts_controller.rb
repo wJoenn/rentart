@@ -15,6 +15,9 @@ class ArtsController < ApplicationController
     @booking = Booking.new
     @review = Review.new
 
+    @rating = @art.reviews.sum(&:rating).fdiv(@art.reviews.count).round(2)
+    @rating = @rating.to_i if @rating == @rating.to_i
+
     @to_time = Time.now
 
     @booked = params[:booked] == "true" if params[:booked]
