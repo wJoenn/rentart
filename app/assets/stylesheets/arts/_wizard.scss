@@ -15,6 +15,30 @@
     right: 50px;
     transform: scale(1.3);
   }
+
+  .pagination {
+    align-items: center;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    position: absolute;
+    width: 1000px;
+    bottom: 50px;
+    left: calc(50% - 500px);
+
+    .page {
+      height: 7px;
+      width: 7px;
+      background-color: rgba(211, 211, 211, 0.5);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+
+      &.active {
+        transform: scale(2);
+        background-color: lightgray;
+      }
+    }
+  }
 }
 
 #wizard-categories {
@@ -49,13 +73,21 @@
 #wizard-location {
   margin-top: 100px;
 
+  form {
+    margin: 0;
+  }
+
   h2 {
-    margin-bottom: 50px;
+    margin-left: -25px;
   }
 
   .address {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .error-messages {
+    margin-bottom: 50px;
   }
 
   .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
@@ -97,6 +129,28 @@
   form {
     margin: 0;
     padding: 0;
+  }
+}
+
+#wizard-title {
+  height: calc(100vh - 182px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  >div {
+    display: flex;
+    height: 70%;
+    align-items: center;
+    gap: 100px;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  img {
+    margin-top: -200px;
   }
 }
 

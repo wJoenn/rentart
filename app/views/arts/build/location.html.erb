@@ -2,16 +2,16 @@
   <div id="wizard-location" class="container-default c-600">
     <%= link_to "Back", "/arts/#{ @art.id }/build/category", class: "btn-default btn-gold max-content bottom-left" %>
 
-    <%= form_for @art, method: :put, url: wizard_path do |f| %>
-      <% if f.object.errors.any? %>
-        <div class="error_messages">
-          <% f.object.errors.full_messages.each do |error| %>
-            <p><%= error %></p>
-          <% end %>
-        </div>
-      <% end %>
+    <h2>Where is your art located ?</h2>
 
-      <h2>Where is your art located ?</h2>
+    <%= form_for @art, method: :put, url: wizard_path do |f| %>
+      <div class="error-messages">
+        <% if f.object.errors.any? %>
+          <% f.object.errors.full_messages.each do |error| %>
+            <p class="text-red"><%= error %></p>
+          <% end %>
+        <% end %>
+      </div>
 
       <div class="address" data-controller="address-autocomplete", data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>"     data-address-autocomplete-show-value="true">
         <%= f.hidden_field :location, data: { address_autocomplete_target: "address", "update-map-target": "field" } %>
@@ -26,5 +26,13 @@
 
       <%= f.submit 'Next', class:"btn-default btn-gold max-content bottom-right" %>
     <% end %>
+
+    <ul class="pagination">
+      <li class="page"></li>
+      <li class="page active"></li>
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page"></li>
+    </ul>
   </div>
 </div>

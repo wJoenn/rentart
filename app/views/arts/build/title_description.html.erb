@@ -1,0 +1,37 @@
+<div id="wizard">
+  <div id="wizard-title" class="container-default c-1200">
+    <%= link_to "Back", "/arts/#{params[:art_id]}/build/location", class: "btn-default btn-gold max-content bottom-left" %>
+
+    <div>
+      <%= image_tag "making_art.svg", width: 400 %>
+
+      <%= form_for @art, method: :put, url: wizard_path do |f| %>
+        <h2>Tell us more about<br>your Art now with a couple infos</h2>
+
+        <div class="form-field">
+          <%= f.label :title %>
+          <%= f.text_field :title, placeholder:"The Mona Lisa" %>
+          <span class="text-red text-smaller"><%= @art.errors.full_messages.find { |m| m.match?("Title") } %></span>
+        </div>
+
+        <div class="form-field">
+          <%= f.label :description %>
+          <%= f.text_area :description, rows: 5, placeholder:"Write something inspiring!" %>
+          <span class="text-red text-smaller"><%= @art.errors.full_messages.find { |m| m.match?("Description") } %></span>
+        </div>
+
+        <div class="art-submit">
+          <%= f.submit 'Next', class: "btn-default btn-gold max-content bottom-right" %>
+        </div>
+      <% end %>
+    </div>
+
+    <ul class="pagination">
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page active"></li>
+      <li class="page"></li>
+      <li class="page"></li>
+    </ul>
+  </div>
+</div>

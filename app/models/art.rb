@@ -1,7 +1,7 @@
 class Art < ApplicationRecord
   # required for multiform
   cattr_accessor :form_steps do
-    %w[new category location title_description_confirmation height_width_confirmation pricing_confirmation upload_photos]
+    %w[new category location title_description height_width_confirmation pricing_confirmation upload_photos]
   end
 
   attr_accessor :form_step
@@ -34,7 +34,7 @@ class Art < ApplicationRecord
   end
 
   def active_or_title_and_description?
-    status == "title_description_confirmation" || active?
+    status == "title_description" || active?
   end
 
   def active_or_height_and_width?

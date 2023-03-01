@@ -5,7 +5,7 @@ class Arts::BuildController < ApplicationController
   steps :new,
         :category,
         :location,
-        :title_description_confirmation,
+        :title_description,
         :height_width_confirmation,
         :pricing_confirmation,
         :upload_photos
