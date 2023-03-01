@@ -1,7 +1,7 @@
 class Art < ApplicationRecord
   # required for multiform
   cattr_accessor :form_steps do
-    %w[new category location title_description height_width_confirmation pricing_confirmation upload_photos]
+    %w[new category location title_description pricing_size upload_photos]
   end
 
   attr_accessor :form_step
@@ -14,8 +14,8 @@ class Art < ApplicationRecord
 
   validates :location, presence: true, if: :active_or_location?
   validates :title, :description, presence: true, if: :active_or_title_and_description?
-  validates :height, :width, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true, if: :active_or_height_and_width?
-  validates :price, presence: true, numericality: { greater_than: 0 }, if: :active_or_pricing?
+  validates :height, :width, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true, if: :active_or_price_and_size?
+  validates :price, presence: true, numericality: { greater_than: 0 }, if: :active_or_price_and_size?
 
   include PgSearch::Model
   pg_search_scope :global_search,
@@ -41,7 +41,7 @@ class Art < ApplicationRecord
     status == "height_width_confirmation" || active?
   end
 
-  def active_or_pricing?
-    status == "pricing_confirmation" || active?
+  def active_or_price_and_size?
+    status == "price_size" || active?
   end
 end

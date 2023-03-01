@@ -95,6 +95,24 @@
   }
 }
 
+#wizard-price {
+  height: calc(100vh - 182px);
+  display: flex;
+  align-items: center;
+
+  form {
+    margin: 0 auto;
+
+    >div {
+      margin-bottom: 50px;
+    }
+  }
+
+  h2, p {
+    text-align: right;
+  }
+}
+
 #wizard-new {
   > div {
     align-items: center;

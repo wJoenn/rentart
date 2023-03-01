@@ -6,8 +6,7 @@ class Arts::BuildController < ApplicationController
         :category,
         :location,
         :title_description,
-        :height_width_confirmation,
-        :pricing_confirmation,
+        :price_size,
         :upload_photos
 
   def show

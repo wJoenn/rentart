@@ -1,0 +1,42 @@
+<div id="wizard">
+  <div id="wizard-price" class="container-default c-600">
+    <%= link_to "Back", "/arts/#{ @art.id }/build/title_description", class: "btn-default btn-gold max-content bottom-left" %>
+
+    <%= form_for @art, method: :put, url: wizard_path do |f| %>
+      <div>
+        <h2>How much is your Art</h2>
+
+        <div class="form-field">
+          <%= f.label "Price / day" %>
+          <%= f.number_field :price, step: :any %>
+          <span class="text-red text-smaller"><%= @art.errors.full_messages.find { |m| m.match?("Price") } %></span>
+        </div>
+      </div>
+
+      <div>
+        <h2>And what are its dimensions</h2>
+        <p>This will help us calculate the cost of delivery</p>
+
+        <div class="form-field">
+          <%= f.label "Height (in centimeter)" %>
+          <%= f.number_field :height %>
+        </div>
+
+        <div class="form-field">
+          <%= f.label "Width (in centimeter)" %>
+          <%= f.number_field :width %>
+        </div>
+      </div>
+
+      <%= f.submit 'next', class:"btn-default btn-gold max-content bottom-right" %>
+    <% end %>
+
+    <ul class="pagination">
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page active"></li>
+      <li class="page"></li>
+    </ul>
+  </div>
+</div>
