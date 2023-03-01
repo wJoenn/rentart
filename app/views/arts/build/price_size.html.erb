@@ -7,7 +7,7 @@
         <h2>How much is your Art</h2>
 
         <div class="form-field">
-          <%= f.label "Price / day" %>
+          <%= f.label :price, "Price / day" %>
           <%= f.number_field :price, step: :any %>
           <span class="text-red text-smaller"><%= @art.errors.full_messages.find { |m| m.match?("Price") } %></span>
         </div>
@@ -18,12 +18,12 @@
         <p>This will help us calculate the cost of delivery</p>
 
         <div class="form-field">
-          <%= f.label "Height (in centimeter)" %>
+          <%= f.label :height, "Height (in centimeter)" %>
           <%= f.number_field :height %>
         </div>
 
         <div class="form-field">
-          <%= f.label "Width (in centimeter)" %>
+          <%= f.label :width, "Width (in centimeter)" %>
           <%= f.number_field :width %>
         </div>
       </div>

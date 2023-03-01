@@ -1,0 +1,30 @@
+<div id="wizard">
+  <div id="wizard-photos" class="container-default c-1200">
+    <%= link_to "Back", "/arts/#{ @art.id }/build/price_size", class: "btn-default btn-gold max-content bottom-left" %>
+
+    <%= form_for @art, method: :put, url: wizard_path do |f| %>
+
+      <div data-controller="photo-uploader">
+        <div class="row">
+          <h2 class="max-content">Let's wrap up with a few pictures</h2>
+          <%= f.file_field :photos, multiple: true, multiple: true, accept: "image/*", data: { action: "change->photo-uploader#addFile" } %>
+        </div>
+        <span class="text-red text-smaller"><%= "You need to add at least one photo" if @art.errors.any? %></span>
+
+        <div class="photos" data-photo-uploader-target="files">
+          <div class="sub-photos" data-photo-uploader-target="subfiles"></div>
+        </div>
+      </div>
+
+      <%= f.submit 'Validate', class:"btn-default btn-gold max-content bottom-right" %>
+    <% end %>
+
+    <ul class="pagination">
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page"></li>
+      <li class="page active"></li>
+    </ul>
+  </div>
+</div>

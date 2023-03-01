@@ -78,7 +78,7 @@
   }
 
   h2 {
-    margin-left: -25px;
+    margin-left: -15px;
   }
 
   .address {
@@ -92,6 +92,84 @@
 
   .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
     display: none !important;
+  }
+}
+
+#wizard-photos {
+  margin-top: 100px;
+
+  form {
+    padding: 0;
+    width: 100%;
+
+    .row {
+      align-items: center;
+      display: flex;
+      gap: 50px;
+    }
+
+    input[type='file'] {
+      background-color: $main-grey;
+      border: none;
+      box-shadow: none;
+      color: $main-grey;
+      padding: 0;
+      width: 200px;
+    }
+
+    input::file-selector-button {
+      background-color: $main-grey;
+      border: 1px solid $gold;
+      border-radius: 3px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      color: $gold;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 500;
+      padding: $text-padding;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $gold;
+        color: $main-grey;
+        filter: brightness(110%);
+      }
+    }
+  }
+
+  .field_with_errors {
+    padding: 0;
+    width: max-content;
+  }
+
+  .photos {
+    border-radius: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+    overflow: hidden;
+
+    .sub-photos {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+
+      .selected-file {
+        height: 285px;
+      }
+    }
+  }
+
+  .selected-file {
+    background-position: center;
+    background-size: cover;
+    height: 590px;
+  }
+
+  .selected-file input[type='file'] {
+    display: none;
   }
 }
 
