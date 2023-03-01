@@ -16,6 +16,9 @@ application.register("booking-form-price", BookingFormPriceController)
 import Carousel from 'stimulus-carousel'
 application.register('carousel', Carousel)
 
+import CategoryScrollController from "./category_scroll_controller"
+application.register("category-scroll", CategoryScrollController)
+
 import CategorySelectorController from "./category_selector_controller"
 application.register("category-selector", CategorySelectorController)
 

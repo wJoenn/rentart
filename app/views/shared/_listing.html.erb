@@ -1,18 +1,18 @@
-<div class="category-container">
+<div class="category-container" data-controller="category-scroll">
     <div class="category-btn">
-      <i class="fa-solid fa-arrow-left"></i>
+      <i class="fa-solid fa-arrow-left" data-action="click->category-scroll#scrollLeft"></i>
     </div>
 
     <div class="category-cards">
       <% @categories.each do |c| %>
-        <%= link_to category_path(c), class:"category-card", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#{ cl_image_path c.photo.key }');" do %>
+        <%= link_to category_path(c), class:"category-card", "data-category-scroll-target": "cards", style:"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#{ cl_image_path c.photo.key }');" do %>
           <span><%= c.name %></span>
         <% end %>
       <% end %>
     </div>
 
     <div class="category-btn">
-      <i class="fa-solid fa-arrow-right"></i>
+      <i class="fa-solid fa-arrow-right" data-action="click->category-scroll#scrollRight"></i>
     </div>
   </div>
 
