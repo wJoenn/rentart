@@ -5,10 +5,9 @@ class Arts::BuildController < ApplicationController
   steps :new,
         :category,
         :location,
-        :title_description_confirmation,
-        :height_width_confirmation,
-        :pricing_confirmation,
-        :upload_photos
+        :title_description,
+        :price_size,
+        :photos
 
   def show
     @art = Art.find(params[:art_id])
@@ -17,8 +16,11 @@ class Arts::BuildController < ApplicationController
 
   def update
     @art = Art.find(params[:art_id])
-    @art.update(set_params) if params[:art]
-    render_wizard @art
+    if params[:art] && @art.update(set_params)
+      choose_redirect_path
+    else
+      render_wizard @art
+    end
   end
 
   def create
@@ -30,6 +32,15 @@ class Arts::BuildController < ApplicationController
   end
 
   private
+
+  def choose_redirect_path
+    if step == steps.last
+      @art.update(status: "active")
+      redirect_to user_listings_path
+    else
+      render_wizard @art
+    end
+  end
 
   def disable_footer
     @disable = true

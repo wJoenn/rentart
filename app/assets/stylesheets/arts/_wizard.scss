@@ -15,6 +15,30 @@
     right: 50px;
     transform: scale(1.3);
   }
+
+  .pagination {
+    align-items: center;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    position: absolute;
+    width: 1000px;
+    bottom: 50px;
+    left: calc(50% - 500px);
+
+    .page {
+      height: 7px;
+      width: 7px;
+      background-color: rgba(211, 211, 211, 0.5);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+
+      &.active {
+        transform: scale(2);
+        background-color: lightgray;
+      }
+    }
+  }
 }
 
 #wizard-categories {
@@ -49,8 +73,12 @@
 #wizard-location {
   margin-top: 100px;
 
+  form {
+    margin: 0;
+  }
+
   h2 {
-    margin-bottom: 50px;
+    margin-left: -15px;
   }
 
   .address {
@@ -58,8 +86,108 @@
     flex-direction: column-reverse;
   }
 
+  .error-messages {
+    margin-bottom: 50px;
+  }
+
   .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
     display: none !important;
+  }
+}
+
+#wizard-photos {
+  margin-top: 100px;
+
+  form {
+    padding: 0;
+    width: 100%;
+
+    .row {
+      align-items: center;
+      display: flex;
+      gap: 50px;
+    }
+
+    input[type='file'] {
+      background-color: $main-grey;
+      border: none;
+      box-shadow: none;
+      color: $main-grey;
+      padding: 0;
+      width: 200px;
+    }
+
+    input::file-selector-button {
+      background-color: $main-grey;
+      border: 1px solid $gold;
+      border-radius: 3px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      color: $gold;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 500;
+      padding: $text-padding;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $gold;
+        color: $main-grey;
+        filter: brightness(110%);
+      }
+    }
+  }
+
+  .field_with_errors {
+    padding: 0;
+    width: max-content;
+  }
+
+  .photos {
+    border-radius: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+    overflow: hidden;
+
+    .sub-photos {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+
+      .selected-file {
+        height: 285px;
+      }
+    }
+  }
+
+  .selected-file {
+    background-position: center;
+    background-size: cover;
+    height: 590px;
+  }
+
+  .selected-file input[type='file'] {
+    display: none;
+  }
+}
+
+#wizard-price {
+  height: calc(100vh - 182px);
+  display: flex;
+  align-items: center;
+
+  form {
+    margin: 0 auto;
+
+    >div {
+      margin-bottom: 50px;
+    }
+  }
+
+  h2, p {
+    text-align: right;
   }
 }
 
@@ -97,6 +225,28 @@
   form {
     margin: 0;
     padding: 0;
+  }
+}
+
+#wizard-title {
+  height: calc(100vh - 182px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  >div {
+    display: flex;
+    height: 70%;
+    align-items: center;
+    gap: 100px;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  img {
+    margin-top: -200px;
   }
 }
 

@@ -55,7 +55,7 @@
         <%= f.hidden_field :price,  data: { "booking-form-price-target": "price" }%>
 
         <div class="form-field">
-          <%= f.label :address %>
+          <%= f.label "Delivery address" %>
           <div data-controller="address-autocomplete", data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
             <%= f.hidden_field :address, data: {address_autocomplete_target: "address"} %>
           </div>
