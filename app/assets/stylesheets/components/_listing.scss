@@ -42,9 +42,16 @@
     height: 40px;
     justify-content: center;
     width: 40px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
 
     @media screen and (min-width: $large) {
       display: flex;
+    }
+
+    &:hover {
+      transform: scale(1.15);
+      opacity: 1;
     }
   }
 
